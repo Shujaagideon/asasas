@@ -1,0 +1,50 @@
+%block-margins {
+  margin: 1em 0;
+}
+
+%heading-margins {
+  margin: 1em 0 0.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* headings */
+h1 {
+  font-size: 80px;
+  line-height: 80px;
+  // @extend %heading-margins;
+  // background: #000;
+}
+h2 {
+  font-size: 50px;
+  line-height: 1.1;
+}
+h3 {
+  font-size: 40px;
+  line-height: 1.3;
+}
+h4 {
+  font-size: 35px;
+  line-height: 1.3;
+}
+h5 {
+  font-size: 30px;
+  line-height: 1;
+}
+h6 {
+  font-size: 26px;
+  line-height: 1;
+}
+
+// Others
+p, ul, ol, pre {
+  @extend %block-margins;
+}
+
+p {
+  font-size: 18px;
+  color: inherit;
+  line-height: 1;
+}

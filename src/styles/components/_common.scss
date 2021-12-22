@@ -1,0 +1,33 @@
+
+.container{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    @include flexing(center, center, row);
+    
+    .wrapper{
+        height: 100%;
+        width: 100%;
+        padding-left: 20px;
+    }
+}
+.coloredBg{
+    background-color: $color-teal-1;
+}
+.button{
+    @include flexing(center, center, row);
+    background-color: $color-white;
+    color: $color-teal-1;
+    font-size: 16px;
+    border-radius: 50px;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+.text{
+    height: fit-content;
+    overflow: hidden;
+    cursor: default;
+}
+#outsideSvg{
+    display: none;
+}

@@ -1,0 +1,50 @@
+
+.landingCover{
+    height: 100%;
+    width: 100%;
+    background: url('./../assets/images/boat.jpg');
+    background-size: 140% 100%;
+    background-repeat: no-repeat;
+    background-position:0 center;
+    mask: url('../assets/flower.svg');
+    mask-size: 15%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.darkBackground{
+    backdrop-filter: brightness(70%);
+    height: 100%;
+    width: 100%;
+    .cover{
+        height: 100%;
+        width: 100%;
+        // background: #000;
+        @include flexing(flex-end, space-between, row);
+        color: $color-gray-light;
+        .left-text{
+            width: 50%;
+        }
+        .rightContent{
+            width: 50%;
+            height: 90%;
+            @include flexing(flex-end, flex-end, column);
+            .cont{
+                height: 50%;
+                @include flexing(center, center, row);
+                width: 50%;
+                .icon{
+                opacity: 0;
+            }
+                .cover{
+                    height: 70%;
+                    width: 80%;
+                    @include flexing(flex-start, space-around, column);
+                }
+            }
+            .bottom{
+                background-color: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+header{
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    width: 100%;
+    opacity: 0;
+    @include flexing(center, center, row);
+    .cover{
+        height: 100%;
+        width: 100%;
+        @include flexing(center, space-between, row);
+        color: $color-white;
+        padding-left: 20px;
+        
+        .logo{
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 10px;
+            }
+        }
+        nav{
+            width: 25%;
+            font-size: 14px;
+            @include flexing(center, space-around, row);
+            .hamburgerMenu{
+                cursor: pointer;
+                div{
+                    height: 2px;
+                    width: 20px;
+                    background: $color-white;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+}

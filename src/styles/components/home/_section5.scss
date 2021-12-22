@@ -1,0 +1,14 @@
+.insights{
+    height: 100%;
+    width: 100%;
+    background: url('../assets/images/insights.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $color-white;
+    .cover{
+        height: 100%;
+        width: 100%;
+        backdrop-filter: brightness(75%);
+        @include flexing(center, center, column);
+    }
+}

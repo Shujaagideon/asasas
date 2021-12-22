@@ -1,0 +1,56 @@
+.window{
+    // background: url('../assets/background.svg');
+    background-size: cover;
+    color: $color-black;
+    margin-top: 100px;
+    height: 160vh;
+    .section2Cover{
+        height: 100%;
+        width: 100%;
+        @include flexing(center, space-between, column);
+        .text{
+            width: 48%;
+            height: 18%;
+            h2{
+                text-align: center;
+            }
+        }
+        .circleExpand{
+            height: 75%;
+            width:100%;
+            @include flexing(center, center, row);
+            .circle{
+                height: 500px;
+                width: 500px;
+                border-radius: 50%;
+                overflow: hidden;
+                background: url('../assets/images/landscape.jpg');
+                background-size: cover;
+                position: relative;
+                color: $color-white;
+                @include flexing(center, center, row);
+                .cover{
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    backdrop-filter: blur(1px) brightness(90%);
+                    z-index: 0;
+                }
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 90%;
+                    width: 90%;
+                    z-index: 1;
+                }
+                h6{
+                    z-index: 1;
+                    width: 40%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

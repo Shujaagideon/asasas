@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+    width: 1px;
+}
+*::-webkit-scrollbar-track {
+    background: $color-teal-2;
+}
+*::-webkit-scrollbar-thumb {
+    background: $color-gold;
+    border-radius: 20px;
+    transition: ease 0.8s;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: $color-gold-hover;
+}
+body{
+    overscroll-behavior: none;
+    overflow: hidden;
+    color: $color-black
+}

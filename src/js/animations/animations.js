@@ -21,6 +21,10 @@ export default class Animations {
             onComplete: () => {
                 document.body.style.overflowY = 'scroll';
                 document.querySelector('.intro').style.display = 'none';
+                gsap.to('.landingCover', {
+                    backgroundSize: window.innerHeight> window.innerHeight ?`calc(75% + 4px) 100%`: 'cover',
+                    duration: 0,
+                })
             }
         });
         this.section2Tl = gsap.timeline({
@@ -74,7 +78,7 @@ export default class Animations {
             delay: -0.5,
         });
         this.introTl.to('.landingCover', {
-            backgroundSize: `calc(75% + 4px) 100% `,
+            backgroundSize: `calc(75% + 4px)`,
             maskSize: '500%',
             duration: 2,
             ease: 'Power2.easeOut',

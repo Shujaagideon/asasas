@@ -22,7 +22,7 @@ export default class Animations {
                 document.body.style.overflowY = 'scroll';
                 document.querySelector('.intro').style.display = 'none';
                 gsap.to('.landingCover', {
-                    backgroundSize: window.innerHeight> window.innerHeight ?`calc(75% + 4px) 100%`: 'cover',
+                    backgroundSize: window.innerHeight < window.innerHeight ?`calc(75% + 4px) 100%`: 'cover',
                     duration: 0,
                 })
             }

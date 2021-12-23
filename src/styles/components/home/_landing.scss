@@ -34,12 +34,17 @@
                 @include flexing(center, center, row);
                 width: 50%;
                 .icon{
-                opacity: 0;
-            }
+                    opacity: 0;
+                }
                 .cover{
                     height: 70%;
                     width: 80%;
                     @include flexing(flex-start, space-around, column);
+                    .text{
+                        p{
+                            margin-top: 0;
+                        }
+                    }
                 }
             }
             .bottom{

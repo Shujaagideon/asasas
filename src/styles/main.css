@@ -127,6 +127,20 @@ p {
   cursor: pointer;
 }
 
+.logo {
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
 .text {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -434,20 +448,6 @@ header .cover {
   padding-left: 20px;
 }
 
-header .cover .logo {
-  font-size: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header .cover .logo img {
-  margin-right: 10px;
-}
-
 header .cover nav {
   width: 25%;
   font-size: 14px;
@@ -587,6 +587,10 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.darkBackground .cover .rightContent .cont .cover .text p {
+  margin-top: 0;
 }
 
 .darkBackground .cover .rightContent .bottom {

@@ -36,7 +36,6 @@ export default class Animations {
                 scrub: 1.5,
                 pin: true,
                 // pinSpacing: false,
-                markers: true,
                 end: this.section2.clientHeight + 20,
             },
         });

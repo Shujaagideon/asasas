@@ -175,6 +175,7 @@ export default class Sketch {
         });
         this.plane = this.imgPos.map(img=>{
             let bounds = img.getBoundingClientRect();
+            let material = this.material.clone();
             this.material.uniforms.uQuadSize.value = new THREE.Vector2(bounds.width, bounds.height);
     
             this.geometry = new THREE.PlaneBufferGeometry(bounds.width, bounds.height, 20, 20);

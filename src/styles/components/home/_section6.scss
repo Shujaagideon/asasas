@@ -1,8 +1,27 @@
 .awards{
     background-color: #000;
     color: $color-white;
+    @include flexing(center, space-around, column); 
     .heading{
         width: 40%;
         text-align: center;
+    }
+    .awardsBody{
+        height: 50%;
+        @include flexing(center, space-around, row);
+        flex-wrap: wrap;
+        width: 70%;
+        .cover{
+        @include flexing(center, center, row);
+            height: 30%;
+            width: 30%;
+            img{
+                height: 50%;
+                width: 60%;
+                // background: #fff;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
     }
 }

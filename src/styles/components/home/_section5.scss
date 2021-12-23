@@ -9,6 +9,10 @@
         height: 100%;
         width: 100%;
         backdrop-filter: brightness(75%);
-        @include flexing(center, center, column);
+        @include flexing(center, space-around, column);
+    }
+    .storiesBody{
+        height: 50%;
+        width: 100%;
     }
 }

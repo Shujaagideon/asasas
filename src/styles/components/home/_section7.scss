@@ -1,0 +1,31 @@
+.booking{
+    @include flexing(flex-start, center, row);
+    height: 120vh;
+    .form{
+        height: 100%;
+        width: 50%;
+        @include flexing(flex-start, space-around, column);
+        padding: 50px;
+        h2{
+            height: 10%;
+        }
+        .bookingNav{
+            height: 20%;
+            // background: #000;
+            @include flexing(center, flex-start,row);
+            p{
+                margin-right: 30px;
+            }
+        }
+        .formBody{
+            height: 65%;
+        }
+    }
+    .BookingImg{
+        height: 100%;
+        width: 50%;
+        background: rgba($color: #000000, $alpha: 0.4) url('../assets/images/bookingImg.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+}

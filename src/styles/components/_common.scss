@@ -54,3 +54,109 @@
         }
     }
 }
+
+.link{
+    color: $color-black-light;
+    cursor: pointer;
+    transition: ease 0.5s;
+    position: relative;
+    &:hover{
+        color: $color-black;
+    }
+}
+.activeLink{
+    color: $color-black;        
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: -10%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: $color-gold;
+        transition: ease 0.3s;
+    }
+}
+form{
+    height: 100%;
+    width: 100%;
+    font-size: 16px !important;
+    @include flexing(flex-start, space-around, column);
+    .formDropDowns{
+        width: 100%;
+        @include flexing(center, space-between, row);
+        input{
+            width: 48%;
+        }
+    }
+    input{
+        height: 40px;
+        width: 100%;
+        border: 1px solid $color-black-light;
+        padding: 5px;
+        &:focus{
+            outline: none;
+            border: 1px solid $color-black-light;
+        }
+    }
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid $color-black-light;
+        resize: none;
+        &:focus{
+            outline: none;
+            border: 1px solid $color-black-light;
+        }
+    }
+    button{
+        height: 40px;
+        width: 100px;
+        @include flexing(center, center, row);
+        border: none;
+        background-color: $color-gold;
+        color: $color-white;
+        transition: $transitionEffect;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-gold-hover;
+        }
+    }
+}
+
+.footer{
+    height: 45vh;
+    width: 100%;
+    color: $color-white;
+    background-color: #000;
+    @include flexing(center, space-around, column);
+    .sectCover{
+        @include flexing(center, space-around, row);
+        height: 80%;
+        width: 100%;
+        .sect{
+            height: 80%;
+            width: 18%;
+            h6{
+                font-size: 20px;
+            }
+            p{
+                color: $color-white-50;
+                font-size: 16px;
+            }
+            &:nth-child(3){
+                border-right: 1px solid $color-white-50;
+            }
+        }
+    }
+    .footerBottom{
+        width: 95%;
+        border-top: 1px solid $color-white-50;
+        color: $color-gray;
+        @include flexing(center, space-between, row);
+        p{
+            font-size: 14px;
+        }
+    }
+}

@@ -182,6 +182,203 @@ p {
   border: none;
 }
 
+.link {
+  color: #e0e0e0;
+  cursor: pointer;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+  position: relative;
+}
+
+.link:hover {
+  color: #2a2a2a;
+}
+
+.activeLink {
+  color: #2a2a2a;
+}
+
+.activeLink::before {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #C78F66;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+form {
+  height: 100%;
+  width: 100%;
+  font-size: 16px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form .formDropDowns {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+form .formDropDowns input {
+  width: 48%;
+}
+
+form input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+}
+
+form input:focus {
+  outline: none;
+  border: 1px solid #e0e0e0;
+}
+
+form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid #e0e0e0;
+  resize: none;
+}
+
+form textarea:focus {
+  outline: none;
+  border: 1px solid #e0e0e0;
+}
+
+form button {
+  height: 40px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: none;
+  background-color: #C78F66;
+  color: #ffffff;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #c78e66bc;
+}
+
+.footer {
+  height: 45vh;
+  width: 100%;
+  color: #ffffff;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .sectCover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 80%;
+  width: 100%;
+}
+
+.footer .sectCover .sect {
+  height: 80%;
+  width: 18%;
+}
+
+.footer .sectCover .sect h6 {
+  font-size: 20px;
+}
+
+.footer .sectCover .sect p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+}
+
+.footer .sectCover .sect:nth-child(3) {
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer .footerBottom {
+  width: 95%;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  color: #5D5D5D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer .footerBottom p {
+  font-size: 14px;
+}
+
 canvas {
   display: block;
 }
@@ -882,4 +1079,76 @@ header .cover nav .hamburgerMenu div {
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+}
+
+.booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 120vh;
+}
+
+.booking .form {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+}
+
+.booking .form h2 {
+  height: 10%;
+}
+
+.booking .form .bookingNav {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.booking .form .bookingNav p {
+  margin-right: 30px;
+}
+
+.booking .form .formBody {
+  height: 65%;
+}
+
+.booking .BookingImg {
+  height: 100%;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.4) url("../assets/images/bookingImg.jpg");
+  background-position: center;
+  background-size: cover;
 }

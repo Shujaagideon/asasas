@@ -26,7 +26,7 @@ $color-teal-1: #07424D;
 $color-teal-2: #1F4753;
 
 // Transitions
-$transitionEffect: cubic-bezier(.6,.04,.12,.96);
+$transitionEffect: ease 0.4s;
 
 // Header
 $header-height: 75px;

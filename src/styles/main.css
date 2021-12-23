@@ -1,4 +1,147 @@
 /* scss variables */
+@font-face {
+  font-family: 'Arial';
+  src: url("../assets/Fonts/Arial.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Arial';
+  src: url("../assets/Fonts/Arial Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url("../assets/Fonts/Graphik-Regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url("../assets/Fonts/Graphik-Black.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url("../assets/Fonts/Graphik-bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url("../assets/Fonts/Graphik-Extralight.otf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Graphik-light';
+  src: url("../assets/Fonts/Graphik-Light.otf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Graphik-Medium';
+  src: url("../assets/Fonts/Graphik-Medium.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Graphik-semiBold';
+  src: url("../assets/Fonts/Graphik-SemiBold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Graphik-sSuper';
+  src: url("../assets/Fonts/Graphik-Super.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Graphik-Thin';
+  src: url("../assets/Fonts/Graphik-Thin.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'LT_5500';
+  src: url("../assets/Fonts/LT_55700.ttf");
+}
+
+@font-face {
+  font-family: 'LT_5501';
+  src: url("../assets/Fonts/LT_55701.ttf");
+}
+
+@font-face {
+  font-family: 'LT_5502';
+  src: url("../assets/Fonts/LT_55702.ttf");
+}
+
+@font-face {
+  font-family: 'Starling';
+  src: url("../assets/Fonts/Starling-Book.otf");
+  font-weight: 500;
+}
+
+ul, ol, pre {
+  margin: 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: 'Starling';
+}
+
+/* headings */
+h1 {
+  font-weight: 350;
+  font-size: 160px;
+  line-height: 168px;
+}
+
+h2 {
+  font-weight: 350;
+  font-size: 80px;
+  line-height: 88px;
+}
+
+h3 {
+  font-family: 'Graphik';
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 98px;
+}
+
+h4 {
+  font-family: 'Graphik';
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 68px;
+}
+
+h5 {
+  font-family: 'Graphik-Medium';
+  font-size: 55px;
+  line-height: 120%;
+}
+
+h6 {
+  font-family: 'Graphik';
+  font-size: 40px;
+  line-height: 48px;
+}
+
+p {
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -29,51 +172,7 @@ body {
   overscroll-behavior: none;
   overflow: hidden;
   color: #2a2a2a;
-}
-
-p, ul, ol, pre {
-  margin: 1em 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-
-/* headings */
-h1 {
-  font-size: 80px;
-  line-height: 80px;
-}
-
-h2 {
-  font-size: 50px;
-  line-height: 1.1;
-}
-
-h3 {
-  font-size: 40px;
-  line-height: 1.3;
-}
-
-h4 {
-  font-size: 35px;
-  line-height: 1.3;
-}
-
-h5 {
-  font-size: 30px;
-  line-height: 1;
-}
-
-h6 {
-  font-size: 26px;
-  line-height: 1;
-}
-
-p {
-  font-size: 18px;
-  color: inherit;
-  line-height: 1;
+  font-family: 'Graphik';
 }
 
 .container {
@@ -112,33 +211,37 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #ffffff;
   color: #07424D;
-  font-size: 16px;
+  font-family: 'Graphik-Light';
+  font-size: 14px !important;
+  font-weight: 200;
   border-radius: 50px;
-  padding: 6px 8px;
+  padding: 6px 16px;
   cursor: pointer;
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'LT_5500';
+  text-transform: uppercase;
 }
 
 .logo img {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .text {
@@ -445,7 +548,8 @@ header .cover {
       -ms-flex-direction: row;
           flex-direction: row;
   color: #ffffff;
-  padding-left: 20px;
+  padding-left: 50px;
+  padding-right: 30px;
 }
 
 header .cover nav {
@@ -470,7 +574,7 @@ header .cover nav .hamburgerMenu {
 }
 
 header .cover nav .hamburgerMenu div {
-  height: 2px;
+  height: 1px;
   width: 20px;
   background: #ffffff;
   margin-bottom: 4px;
@@ -478,24 +582,28 @@ header .cover nav .hamburgerMenu div {
 
 .intro {
   color: #C78F66;
-  font-size: 50px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
 }
 
+.intro h1 {
+  font-family: 'LT_5502';
+  font-size: 60px !important;
+}
+
 .landingCover {
   height: 100%;
   width: 100%;
   background: url("./../assets/images/boat.jpg");
-  background-size: 140% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 center;
-  -webkit-mask: url("../assets/flower.svg");
-          mask: url("../assets/flower.svg");
-  -webkit-mask-size: 15%;
-          mask-size: 15%;
+  -webkit-mask: url("../assets/vector.svg");
+          mask: url("../assets/vector.svg");
+  -webkit-mask-size: 0%;
+          mask-size: 0%;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -512,6 +620,7 @@ header .cover nav .hamburgerMenu div {
 .darkBackground .cover {
   height: 100%;
   width: 100%;
+  padding-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,11 +639,16 @@ header .cover nav .hamburgerMenu div {
 
 .darkBackground .cover .left-text {
   width: 50%;
+  padding-bottom: 50px;
 }
 
 .darkBackground .cover .rightContent {
-  width: 50%;
-  height: 90%;
+  width: 30%;
+  padding-top: 40px;
+  height: 100%;
+  background-color: #07424D;
+  -webkit-transform: translate3D(100%, 0, 0);
+          transform: translate3D(100%, 0, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,7 +679,7 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 50%;
+  width: 100%;
 }
 
 .darkBackground .cover .rightContent .cont .icon {
@@ -574,12 +688,13 @@ header .cover nav .hamburgerMenu div {
 
 .darkBackground .cover .rightContent .cont .cover {
   height: 70%;
-  width: 80%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -587,10 +702,32 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 40px;
+}
+
+.darkBackground .cover .rightContent .cont .cover img {
+  height: 39px;
+  width: 25px;
+}
+
+.darkBackground .cover .rightContent .cont .cover .icon2 {
+  width: 43px;
+}
+
+.darkBackground .cover .rightContent .cont .cover .text {
+  margin-top: 30px;
+}
+
+.darkBackground .cover .rightContent .cont .cover .text h5 {
+  font-family: 'Starling';
+  font-style: normal;
+  font-weight: 350;
+  font-size: 40px;
+  line-height: 58px;
 }
 
 .darkBackground .cover .rightContent .cont .cover .text p {
-  margin-top: 0;
+  font-size: 14px !important;
 }
 
 .darkBackground .cover .rightContent .bottom {
@@ -613,22 +750,23 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 80px;
 }
 
 .window .section2Cover .text {
-  width: 48%;
+  width: 60%;
   height: 18%;
 }
 
-.window .section2Cover .text h2 {
-  text-align: center;
+.window .section2Cover .text h3 {
+  font-size: 55px;
 }
 
 .window .section2Cover .circleExpand {

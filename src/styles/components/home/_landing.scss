@@ -3,11 +3,11 @@
     height: 100%;
     width: 100%;
     background: url('./../assets/images/boat.jpg');
-    background-size: 140% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position:0 center;
-    mask: url('../assets/flower.svg');
-    mask-size: 15%;
+    mask: url('../assets/vector.svg');
+    mask-size: 0%;
     mask-repeat: no-repeat;
     mask-position: center;
 }
@@ -20,29 +20,50 @@
         height: 100%;
         width: 100%;
         // background: #000;
+        padding-left: 30px;
         @include flexing(flex-end, space-between, row);
         color: $color-gray-light;
         .left-text{
             width: 50%;
+            padding-bottom: 50px;
         }
         .rightContent{
-            width: 50%;
-            height: 90%;
+            width: 30%;
+            padding-top: 40px;
+            height: 100%;
+            background-color: $color-teal-1;
+            transform: translate3D(100%,0,0);
             @include flexing(flex-end, flex-end, column);
             .cont{
                 height: 50%;
                 @include flexing(center, center, row);
-                width: 50%;
+                width: 100%;
                 .icon{
                     opacity: 0;
                 }
                 .cover{
                     height: 70%;
-                    width: 80%;
-                    @include flexing(flex-start, space-around, column);
+                    width: 90%;
+                    @include flexing(flex-start, center, column);
+                    padding-left: 40px;
+                    img{
+                        height: 39px;
+                        width: 25px;
+                    }
+                    .icon2{
+                        width: 43px;
+                    }
                     .text{
+                        margin-top: 30px;
+                        h5{
+                            font-family: 'Starling';
+                            font-style: normal;
+                            font-weight: 350;
+                            font-size: 40px;
+                            line-height: 58px;
+                        }
                         p{
-                            margin-top: 0;
+                            font-size: 14px !important;
                         }
                     }
                 }

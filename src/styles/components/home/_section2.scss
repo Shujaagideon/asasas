@@ -7,12 +7,13 @@
     .section2Cover{
         height: 100%;
         width: 100%;
-        @include flexing(center, space-between, column);
+        @include flexing(flex-start, space-between, column);
+        padding-left: 80px;
         .text{
-            width: 48%;
+            width: 60%;
             height: 18%;
-            h2{
-                text-align: center;
+            h3{
+                font-size: 55px;
             }
         }
         .circleExpand{

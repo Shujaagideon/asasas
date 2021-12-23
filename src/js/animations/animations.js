@@ -21,10 +21,6 @@ export default class Animations {
             onComplete: () => {
                 document.body.style.overflowY = 'scroll';
                 document.querySelector('.intro').style.display = 'none';
-                gsap.to('.landingCover', {
-                    backgroundSize: window.innerHeight < window.innerWidth ? `calc(75% + 4px) 100%` : 'cover',
-                    duration: 0,
-                })
             }
         });
         this.section2Tl = gsap.timeline({
@@ -77,14 +73,13 @@ export default class Animations {
             delay: -0.5,
         });
         this.introTl.to('.landingCover', {
-            backgroundSize: `calc(75% + 4px)`,
             maskSize: '500%',
             duration: 2,
-            ease: 'Power2.easeOut',
+            ease: 'Power2.easeIn',
         })
-        this.introTl.to('.bottom', {
-            background: '#1F4753',
-            duration: 2,
+        this.introTl.to('.rightContent', {
+            x: 0,
+            duration: 0.6,
             ease: 'Power2.easeOut',
             delay: -0.4,
         })
@@ -117,7 +112,7 @@ export default class Animations {
             let newText = new SplitTextJS(text);
             this.textAnim(newText.chars);
         });
-        [...document.querySelectorAll('.text h4')].forEach(text => {
+        [...document.querySelectorAll('.text h5')].forEach(text => {
             let newText = new SplitTextJS(text);
             this.textAnim(newText.chars);
         });
@@ -138,7 +133,7 @@ export default class Animations {
         let circleCover = document.querySelector('.circleExpand');
 
         
-        let newText = new SplitTextJS(document.querySelector('.text h2'));
+        let newText = new SplitTextJS(document.querySelector('.section2Cover .text h2'));
         gsap.from(newText.chars,{
             scrollTrigger: {
                 trigger: '.section2Cover',

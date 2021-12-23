@@ -10,7 +10,8 @@ header{
         width: 100%;
         @include flexing(center, space-between, row);
         color: $color-white;
-        padding-left: 20px;
+        padding-left: 50px;
+        padding-right: 30px;
         
         nav{
             width: 25%;
@@ -19,7 +20,7 @@ header{
             .hamburgerMenu{
                 cursor: pointer;
                 div{
-                    height: 2px;
+                    height: 1px;
                     width: 20px;
                     background: $color-white;
                     margin-bottom: 4px;

@@ -600,8 +600,8 @@ header .cover nav .hamburgerMenu div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 center;
-  -webkit-mask: url("../assets/vector.svg");
-          mask: url("../assets/vector.svg");
+  -webkit-mask: url("../assets/landingFlower.svg");
+          mask: url("../assets/landingFlower.svg");
   -webkit-mask-size: 0%;
           mask-size: 0%;
   -webkit-mask-repeat: no-repeat;

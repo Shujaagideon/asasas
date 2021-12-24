@@ -142,7 +142,7 @@ p {
   line-height: 22px;
 }
 
-@media (min-width: 1026px) and (max-width: 1241px) {
+@media (min-width: 1026px) and (max-width: 1364px) {
   h1 {
     font-size: 100px;
   }

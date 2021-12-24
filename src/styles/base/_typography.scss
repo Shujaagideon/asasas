@@ -152,7 +152,7 @@ p {
   line-height: 22px;
 }
 
-@include media('>smallLaptop','<=laptop'){
+@include media('>smallLaptop','<=desktop'){
   h1{
     font-size: 100px;
   }

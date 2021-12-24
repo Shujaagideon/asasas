@@ -142,7 +142,7 @@ p {
   line-height: 22px;
 }
 
-@media (min-width: 1026px) and (max-width: 1364px) {
+@media (min-width: 1026px) and (max-width: 1440px) {
   h1 {
     font-size: 100px;
   }
@@ -804,7 +804,7 @@ header .cover nav .hamburgerMenu div {
   line-height: 60px;
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1440px) {
   .window .section2Cover .text {
     width: 60%;
     padding-left: 100px;
@@ -883,7 +883,7 @@ header .cover nav .hamburgerMenu div {
   text-align: center;
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1440px) {
   .window .section2Cover .circleExpand .circle {
     height: 800px;
     width: 800px;

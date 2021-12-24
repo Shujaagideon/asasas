@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { sliderData } from "./data/slider1data";
 import SplitTextJS from "split-text-js";
 gsap.registerPlugin(ScrollTrigger);
-// import Slider from "./animations/slider";
+import Slider from "./animations/slider";
 
 
 void new class {
@@ -20,6 +20,8 @@ void new class {
                 splitType: 'chars'
             }
         }
+
+        // import a bunch of Dom elements
         const sliderImageCover = document.querySelector('.firstSlide');
         const titles = document.querySelector('.sliderText h4');
         const description = document.querySelector('.sliderText p');
@@ -27,6 +29,9 @@ void new class {
         const sliderImageCover2 = document.querySelector('.secondSlide');
         const rightBtn = document.querySelector('.right-btn');
         const leftBtn = document.querySelector('.left-btn');
+        
+
+
         this.sliderElements = {
             sliderImageCover,
             sliderImageCover2,
@@ -112,6 +117,7 @@ void new class {
                 gsap.set('.intro h1',{opacity:0, y:20})
                 if (this.loadAnimComplete = true) {
                     this.Start();
+                    // this.animatedSlider();
                 }
             }
         });
@@ -139,7 +145,7 @@ void new class {
         let myPromises = [preloadImages]
         
         Promise.all(myPromises).then(() => {
-            let src = $('#bgImg').css('background-image');
+            let src = document.querySelector('#bgImg').css('background-image');
             let url = src.match(/\((.*?)\)/)[1].replace(/('|")/g, '');
 
             var img = new Image();
@@ -152,7 +158,7 @@ void new class {
 
 
         // this.Sketch = new Sketch(this.ThreeDProps);
-        // this.slider = ;
+        this.slider = new Slider();
     }
 
     setActive(elem){
@@ -166,6 +172,16 @@ void new class {
 
     Start() {
         this.animations = new Animations(this.introElements.text, this.introElements.config);
+    }
+
+    animatedSlider(){
+        const landing = document.querySelector('.landingCover');
+        const landingSliderBtn = document.querySelector('.landingSliderBtn');
+
+        landingSliderBtn.addEventListener('click',()=>{
+            console.log('clicked')
+            this.slider.backgroundSlider(landing, '../assets/images/landscape.jpg');
+        })
     }
 
 

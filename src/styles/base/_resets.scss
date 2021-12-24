@@ -22,4 +22,7 @@ body{
     overflow: hidden;
     color: $color-black;
     font-family: 'Graphik';
+    .imgfilter{
+        display: none;
+    }
 }

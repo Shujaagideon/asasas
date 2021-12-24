@@ -99,7 +99,7 @@ export default class Animations {
             duration: 0.6,
             ease: 'Power2.easeOut',
             stagger: stagger,
-            delay: -1.2,
+            delay: -2,
         })
     }
 
@@ -120,7 +120,7 @@ export default class Animations {
             let newText = new SplitTextJS(text);
             this.textAnim(newText.chars, 0, 0.005);
         });
-        this.introTl.to('header ',{
+        this.introTl.to('header',{
             opacity: 1,
             duration: 0.8,
             ease: 'cubic-bezier(.6,.04,.12,.96)',
@@ -133,12 +133,12 @@ export default class Animations {
         let circleCover = document.querySelector('.circleExpand');
 
         
-        let newText = new SplitTextJS(document.querySelector('.section2Cover .text h2'));
+        let newText = new SplitTextJS(document.querySelector('.section2Cover .text h3'));
         gsap.from(newText.chars,{
             scrollTrigger: {
-                trigger: '.section2Cover',
+                trigger: '.section2Cover .text h3',
                 scroller: '#smoothScroll',
-                top:'top 40%'
+                top:'top center',
             },
             y: 50,
             rotateX: '40deg',

@@ -8,12 +8,21 @@
         height: 100%;
         width: 100%;
         @include flexing(flex-start, space-between, column);
-        padding-left: 80px;
         .text{
-            width: 60%;
+            padding-left: 80px;
+            width: 56%;
             height: 18%;
             h3{
                 font-size: 55px;
+                line-height: 60px;
+            }
+            @include media('>=desktop'){
+                width: 60%;
+                padding-left: 100px;
+                h3{
+                    font-size: 80px;
+                    line-height: 98px;
+                }
             }
         }
         .circleExpand{
@@ -50,6 +59,12 @@
                     z-index: 1;
                     width: 40%;
                     text-align: center;
+                }
+            }
+            @include media('>=desktop'){
+                .circle{
+                    height: 800px;
+                    width: 800px;
                 }
             }
         }

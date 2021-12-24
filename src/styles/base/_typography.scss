@@ -151,3 +151,9 @@ p {
   font-size: 16px;
   line-height: 22px;
 }
+
+@include media('>smallLaptop','<=laptop'){
+  h1{
+    font-size: 100px;
+  }
+}

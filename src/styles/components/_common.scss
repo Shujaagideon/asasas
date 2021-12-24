@@ -59,6 +59,10 @@
             border: 1px solid $color-white-50;
             padding: 15px;
             @include flexing(flex-start, space-between, column);
+            @include media('>laptop'){
+                width: 400px;
+                height: 90%;
+            }
         }
         .active{
             background: $color-gold;
@@ -92,6 +96,7 @@
 form{
     height: 100%;
     width: 100%;
+    max-height: 600px;
     font-size: 16px !important;
     @include flexing(flex-start, space-around, column);
     .formDropDowns{

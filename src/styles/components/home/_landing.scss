@@ -80,6 +80,9 @@
                         @include flexing(center, center, row);
                         color: $color-white;
                         cursor: pointer;
+                        @include media('>laptop'){
+                            bottom: -5%;
+                        }
                     }
                 }
             }

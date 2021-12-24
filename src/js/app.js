@@ -102,7 +102,7 @@ void new class {
         });
         this.Start();
 
-        this.Sketch = new Sketch(this.ThreeDProps);
+        // this.Sketch = new Sketch(this.ThreeDProps);
         // this.slider = ;
     }
 

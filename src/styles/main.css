@@ -142,7 +142,7 @@ p {
   line-height: 22px;
 }
 
-@media (min-width: 1026px) and (max-width: 1440px) {
+@media (min-width: 1026px) and (max-width: 1439px) {
   h1 {
     font-size: 100px;
   }
@@ -300,6 +300,13 @@ body {
           flex-direction: column;
 }
 
+@media (min-width: 1365px) {
+  .cardSliderContent .cardSliderCover .cardSlider {
+    width: 400px;
+    height: 90%;
+  }
+}
+
 .cardSliderContent .cardSliderCover .active {
   background: #C78F66;
   border: none;
@@ -336,6 +343,7 @@ body {
 form {
   height: 100%;
   width: 100%;
+  max-height: 600px;
   font-size: 16px !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -764,6 +772,12 @@ header .cover nav .hamburgerMenu div {
   cursor: pointer;
 }
 
+@media (min-width: 1365px) {
+  .darkBackground .cover .rightContent .cont .cover .btn {
+    bottom: -5%;
+  }
+}
+
 .darkBackground .cover .rightContent .bottom {
   background-color: #1F4753;
 }
@@ -1052,7 +1066,6 @@ header .cover nav .hamburgerMenu div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  opacity: 0;
 }
 
 .slideSection .section3Cover .slider .sliderBody .right .carousel img {

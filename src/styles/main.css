@@ -112,7 +112,7 @@ h3 {
   font-family: 'Graphik';
   font-weight: 300;
   font-size: 80px;
-  line-height: 98px;
+  line-height: 88px;
 }
 
 h4 {
@@ -221,10 +221,10 @@ body {
   background-color: #ffffff;
   color: #07424D;
   font-family: 'Graphik-Light';
-  font-size: 14px !important;
+  font-size: 14px;
   font-weight: 200;
   border-radius: 50px;
-  padding: 6px 16px;
+  padding: 8px 18px;
   cursor: pointer;
 }
 
@@ -703,6 +703,7 @@ header .cover nav .hamburgerMenu div {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 40px;
+  position: relative;
 }
 
 .darkBackground .cover .rightContent .cont .cover img {
@@ -727,11 +728,38 @@ header .cover nav .hamburgerMenu div {
 }
 
 .darkBackground .cover .rightContent .cont .cover .text p {
-  font-size: 14px !important;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.darkBackground .cover .rightContent .cont .cover .btn {
+  position: absolute;
+  bottom: -18%;
+  right: 5%;
+  margin-right: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .darkBackground .cover .rightContent .bottom {
-  background-color: none;
+  background-color: #1F4753;
 }
 
 .window {

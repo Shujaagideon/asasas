@@ -49,24 +49,6 @@ export default class Animations {
         this.sectionsAnimation()
     }
     introAnim() {
-        const introText = new SplitTextJS(document.querySelector('.intro h1'));
-
-        this.introTl.from(introText.chars, {
-            y: 20,
-            opacity: 0,
-            duration: this.config.duration,
-            delay: this.config.delay,
-            ease: this.config.ease,
-            stagger: this.config.stagger,
-        })
-        this.introTl.to(introText.chars, {
-            y: -20,
-            opacity: 0,
-            duration: this.config.duration,
-            delay: 1.3,
-            ease: this.config.ease,
-            stagger: this.config.stagger,
-        });
         this.introTl.to('.intro', {
             opacity: 0,
             duration: 0.4,

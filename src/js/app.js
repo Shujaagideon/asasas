@@ -1,16 +1,17 @@
 import Animations from "./animations/animations";
 import LocomotiveScroll from 'locomotive-scroll';
 import gsap from 'gsap'
+import imagesLoaded from 'imagesloaded';
 import Sketch from './animations/ThreeDAnimations'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { sliderData } from "./data/slider1data";
+import SplitTextJS from "split-text-js";
 gsap.registerPlugin(ScrollTrigger);
 // import Slider from "./animations/slider";
 
 
 void new class {
     constructor() {
-        // this.animations = new Animations();
         this.introElements = {
             cover: document.querySelector('.intro'),
             text: document.querySelector('.intro h1'),
@@ -100,7 +101,47 @@ void new class {
 
             ScrollTrigger.refresh();
         });
-        this.Start();
+        
+        //load all Images First
+        // first have an animation
+        const introText = new SplitTextJS(document.querySelector('.intro h1'));
+        this.loadAnimComplete = false;
+        this.intro = gsap.timeline({
+            yoyo: !this.loadAnimComplete,
+            onComplete: () => {
+                gsap.set('.intro h1',{opacity:0, y:20})
+                if (this.loadAnimComplete = true) {
+                    this.Start();
+                }
+            }
+        });
+
+        this.intro.from(introText.chars, {
+            y: 20,
+            opacity: 0,
+            duration: 0.6,
+            ease: 'Power3.easeIn',
+            stagger: 0.03,
+        })
+        this.intro.to(introText.chars, {
+            y: -20,
+            opacity: 0,
+            duration: 0.6,
+            delay: 1.3,
+            ease: 'Power3.easeIn',
+            stagger: 0.03,
+            
+        });
+        
+        const preloadImages = new Promise((resolve, reject) => {
+            imagesLoaded(document.querySelectorAll("img"), resolve);
+        });
+        let myPromises = [preloadImages]
+        
+        Promise.all(myPromises).then(() => {
+            this.loadAnimComplete == true
+        });
+
 
         // this.Sketch = new Sketch(this.ThreeDProps);
         // this.slider = ;

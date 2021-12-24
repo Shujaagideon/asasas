@@ -15,7 +15,7 @@
     background-color: $color-teal-1;
 }
 .button{
-    @include flexing(flex-start, center, row);
+    @include flexing(center, center, row);
     background-color: $color-white;
     color: $color-teal-1;
     font-family: 'Graphik-Light';

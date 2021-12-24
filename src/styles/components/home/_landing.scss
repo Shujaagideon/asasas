@@ -2,7 +2,7 @@
 .landingCover{
     height: 100%;
     width: 100%;
-    background: url('./../assets/images/boat.jpg');
+    background: url('./../assets/images/boat1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position:0 center;
@@ -20,7 +20,7 @@
         height: 100%;
         width: 100%;
         // background: #000;
-        padding-left: 30px;
+        padding-left: 40px;
         @include flexing(flex-end, space-between, row);
         color: $color-gray-light;
         .left-text{
@@ -66,6 +66,9 @@
                         p{
                             font-size: 14px;
                             color: $color-white-50;
+                            @include media('>laptop'){
+                                font-size: 16px;
+                            }
                         }
                     }
                     .btn{

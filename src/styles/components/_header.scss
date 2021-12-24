@@ -10,15 +10,20 @@ header{
         width: 100%;
         @include flexing(center, space-between, row);
         color: $color-white;
-        padding-left: 50px;
+        padding-left: 60px;
         padding-right: 30px;
         
         nav{
             width: 25%;
             font-size: 14px;
             @include flexing(center, space-around, row);
+            img{
+                height: 13px;
+                width: 12px;
+            }
             .hamburgerMenu{
                 cursor: pointer;
+                padding-top: 5px;
                 div{
                     height: 1px;
                     width: 20px;

@@ -217,9 +217,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -562,7 +562,7 @@ header .cover {
       -ms-flex-direction: row;
           flex-direction: row;
   color: #ffffff;
-  padding-left: 50px;
+  padding-left: 60px;
   padding-right: 30px;
 }
 
@@ -583,8 +583,14 @@ header .cover nav {
           flex-direction: row;
 }
 
+header .cover nav img {
+  height: 13px;
+  width: 12px;
+}
+
 header .cover nav .hamburgerMenu {
   cursor: pointer;
+  padding-top: 5px;
 }
 
 header .cover nav .hamburgerMenu div {
@@ -610,7 +616,7 @@ header .cover nav .hamburgerMenu div {
 .landingCover {
   height: 100%;
   width: 100%;
-  background: url("./../assets/images/boat.jpg");
+  background: url("./../assets/images/boat1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 center;
@@ -634,7 +640,7 @@ header .cover nav .hamburgerMenu div {
 .darkBackground .cover {
   height: 100%;
   width: 100%;
-  padding-left: 30px;
+  padding-left: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -744,6 +750,12 @@ header .cover nav .hamburgerMenu div {
 .darkBackground .cover .rightContent .cont .cover .text p {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 1365px) {
+  .darkBackground .cover .rightContent .cont .cover .text p {
+    font-size: 16px;
+  }
 }
 
 .darkBackground .cover .rightContent .cont .cover .btn {

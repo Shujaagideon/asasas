@@ -139,7 +139,15 @@ void new class {
         let myPromises = [preloadImages]
         
         Promise.all(myPromises).then(() => {
-            this.loadAnimComplete == true
+            let src = $('#bgImg').css('background-image');
+            let url = src.match(/\((.*?)\)/)[1].replace(/('|")/g, '');
+
+            var img = new Image();
+            img.onload = function () {
+                this.loadAnimComplete == true
+            }
+            img.src = url;
+            if (img.complete) img.onload();
         });
 
 

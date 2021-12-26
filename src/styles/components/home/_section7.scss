@@ -16,6 +16,10 @@
         }
         h2{
             height: 10%;
+            text-transform: capitalize;
+            @include media('<desktop'){
+                    font-size: 60px;
+                }
         }
         .bookingNav{
             height: 20%;
@@ -23,10 +27,10 @@
             margin-right: 20px;
             @include flexing(center, flex-start,row);
             p{
-                margin-right: 30px;
+                margin-right: 50px;
                 font-size: 30px;
                 @include media('<desktop'){
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
         }

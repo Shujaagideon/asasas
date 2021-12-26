@@ -1189,7 +1189,6 @@ header .cover nav .hamburgerMenu div {
 }
 
 .stories {
-  padding-top: 100px;
   color: #ffffff;
   text-align: right;
   -webkit-box-orient: vertical;
@@ -1197,6 +1196,19 @@ header .cover nav .hamburgerMenu div {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 130vh;
+  position: relative;
+}
+
+.stories svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.stories .heading {
+  padding-top: 100px;
 }
 
 .stories .heading h1 {
@@ -1455,6 +1467,13 @@ header .cover nav .hamburgerMenu div {
 
 .booking .form h2 {
   height: 10%;
+  text-transform: capitalize;
+}
+
+@media (max-width: 1439px) {
+  .booking .form h2 {
+    font-size: 60px;
+  }
 }
 
 .booking .form .bookingNav {
@@ -1477,13 +1496,13 @@ header .cover nav .hamburgerMenu div {
 }
 
 .booking .form .bookingNav p {
-  margin-right: 30px;
+  margin-right: 50px;
   font-size: 30px;
 }
 
 @media (max-width: 1439px) {
   .booking .form .bookingNav p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 

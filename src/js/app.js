@@ -1,7 +1,7 @@
 import Animations from "./animations/animations";
 import LocomotiveScroll from 'locomotive-scroll';
 import gsap from 'gsap'
-import imagesLoaded from 'imagesloaded';
+// import imagesLoaded from 'imagesloaded';
 import Sketch from './animations/ThreeDAnimations'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { sliderData } from "./data/slider1data";
@@ -139,13 +139,13 @@ void new class {
             
         });
         
-        const preloadImages = new Promise((resolve, reject) => {
-            imagesLoaded(document.querySelectorAll("img"), resolve);
-        });
-        let myPromises = [preloadImages]
+        // const preloadImages = new Promise((resolve, reject) => {
+        //     imagesLoaded(document.querySelectorAll("img"), resolve);
+        // });
+        // let myPromises = [preloadImages]
         
-        Promise.all(myPromises).then(() => {
-            let src = document.querySelector('#bgImg').css('background-image');
+        // Promise.all(myPromises).then(() => {
+            let src = document.querySelector('#bgImg').style.backgroundImage;
             let url = src.match(/\((.*?)\)/)[1].replace(/('|")/g, '');
 
             var img = new Image();
@@ -154,7 +154,7 @@ void new class {
             }
             img.src = url;
             if (img.complete) img.onload();
-        });
+        // });
 
 
         // this.Sketch = new Sketch(this.ThreeDProps);

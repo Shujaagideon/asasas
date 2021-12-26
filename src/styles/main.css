@@ -385,15 +385,22 @@ form .formDropDowns input {
 }
 
 form input {
-  height: 40px;
+  height: 60px;
   width: 100%;
   border: 1px solid #e0e0e0;
   padding: 5px;
+  padding-left: 10px;
 }
 
 form input:focus {
   outline: none;
   border: 1px solid #e0e0e0;
+}
+
+@media (max-width: 1439px) {
+  form input {
+    height: 40px;
+  }
 }
 
 form textarea {
@@ -801,11 +808,20 @@ header .cover nav .hamburgerMenu div {
 .window {
   background-size: cover;
   color: #2a2a2a;
-  margin-top: 100px;
   height: 160vh;
+  position: relative;
+}
+
+.window svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  z-index: -1;
 }
 
 .window .section2Cover {
+  margin-top: 200px;
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -825,7 +841,7 @@ header .cover nav .hamburgerMenu div {
 
 .window .section2Cover .text {
   padding-left: 80px;
-  width: 56%;
+  width: 65%;
   height: 18%;
 }
 
@@ -836,12 +852,12 @@ header .cover nav .hamburgerMenu div {
 
 @media (min-width: 1440px) {
   .window .section2Cover .text {
-    width: 60%;
+    width: 65%;
     padding-left: 100px;
   }
   .window .section2Cover .text h3 {
     font-size: 80px;
-    line-height: 98px;
+    line-height: 90px;
   }
 }
 
@@ -927,12 +943,14 @@ header .cover nav .hamburgerMenu div {
 
 .slideSection .section3Cover {
   height: 100%;
-  width: 90%;
+  width: 100%;
+  padding-left: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -943,7 +961,7 @@ header .cover nav .hamburgerMenu div {
 }
 
 .slideSection .section3Cover .heading {
-  height: 10%;
+  height: 8%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -980,16 +998,18 @@ header .cover nav .hamburgerMenu div {
 
 .slideSection .section3Cover .slider .sliderNav {
   height: 10%;
-  width: 50%;
+  width: 60%;
 }
 
 .slideSection .section3Cover .slider .sliderNav .cover {
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1001,7 +1021,7 @@ header .cover nav .hamburgerMenu div {
 
 .slideSection .section3Cover .slider .sliderNav p {
   font-size: 18px;
-  margin-right: 10px;
+  margin-right: 50px;
 }
 
 .slideSection .section3Cover .slider .sliderBody {
@@ -1017,10 +1037,11 @@ header .cover nav .hamburgerMenu div {
 .slideSection .section3Cover .slider .sliderBody .left {
   height: 100%;
   width: 30%;
+  margin-right: 30px;
 }
 
 .slideSection .section3Cover .slider .sliderBody .left .sliderBtns {
-  height: 50%;
+  height: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1054,14 +1075,23 @@ header .cover nav .hamburgerMenu div {
   height: 50%;
 }
 
+@media (max-width: 1439px) {
+  .slideSection .section3Cover .slider .sliderBody .left .sliderText p {
+    font-size: 14px;
+  }
+}
+
 .slideSection .section3Cover .slider .sliderBody .right {
   height: 100%;
   width: 80%;
+  margin-left: 50px;
+  padding-left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: "";
       -ms-flex-align: "";
           align-items: "";
@@ -1073,11 +1103,12 @@ header .cover nav .hamburgerMenu div {
 
 .slideSection .section3Cover .slider .sliderBody .right .firstSlide {
   margin-top: 30px;
+  margin-right: 50px;
 }
 
 .slideSection .section3Cover .slider .sliderBody .right .carousel {
+  width: 50%;
   height: 80%;
-  width: 35%;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1093,14 +1124,23 @@ header .cover nav .hamburgerMenu div {
 }
 
 .slideSection .section3Cover .slider .sliderBody .right .secondSlide {
-  width: 32%;
+  width: 25%;
+}
+
+@media (min-width: 1441px) {
+  .slideSection .section3Cover .slider .sliderBody .right {
+    padding-left: 140px;
+  }
+  .slideSection .section3Cover .slider .sliderBody .right .firstSlide {
+    width: 60%;
+  }
 }
 
 .slideSection .section3Cover .slider .sliderBody .bottom {
   position: absolute;
   bottom: 0;
-  height: 10%;
-  width: 100%;
+  height: 8%;
+  width: 90%;
   background: inherit !important;
 }
 
@@ -1149,6 +1189,7 @@ header .cover nav .hamburgerMenu div {
 }
 
 .stories {
+  padding-top: 100px;
   color: #ffffff;
   text-align: right;
   -webkit-box-orient: vertical;
@@ -1156,6 +1197,14 @@ header .cover nav .hamburgerMenu div {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 130vh;
+}
+
+.stories .heading h1 {
+  line-height: 110px;
+}
+
+.stories .heading p {
+  margin-bottom: 35px;
 }
 
 .stories .storiesBody {
@@ -1166,9 +1215,9 @@ header .cover nav .hamburgerMenu div {
 }
 
 .stories .storiesBody .imgCover {
-  height: 80%;
+  height: 85%;
   width: 25%;
-  top: 10%;
+  top: 8%;
   position: absolute;
 }
 
@@ -1179,29 +1228,61 @@ header .cover nav .hamburgerMenu div {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transform: translate3d(0, 150px, 0);
-          transform: translate3d(0, 150px, 0);
 }
 
 .stories .storiesBody .img1 {
-  left: 20%;
-  -webkit-transform: rotateZ(25deg);
-          transform: rotateZ(25deg);
+  left: 25%;
   height: 75%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%) rotateZ(5deg);
+          transform: translate(0, -50%) rotateZ(5deg);
   width: 20%;
 }
 
 .stories .storiesBody .img2 {
-  left: 40%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 3;
 }
 
 .stories .storiesBody .img3 {
-  left: 65%;
-  -webkit-transform: rotateZ(-25deg);
-          transform: rotateZ(-25deg);
+  left: 60%;
   height: 75%;
   width: 20%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%) rotateZ(-5deg);
+          transform: translate(0, -50%) rotateZ(-5deg);
+}
+
+@media (min-width: 1441px) {
+  .stories .storiesBody {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .stories .storiesBody .imgCover {
+    width: 35%;
+  }
+  .stories .storiesBody .img1 {
+    left: 15%;
+  }
+  .stories .storiesBody .img3 {
+    left: 50%;
+  }
+}
+
+.stories p {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1441px) {
+  .stories h1 {
+    line-height: 168px;
+  }
+  .stories p {
+    font-size: 30px;
+    line-height: 38px;
+  }
 }
 
 .insights {
@@ -1252,11 +1333,18 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 50px;
 }
 
 .awards .heading {
-  width: 40%;
+  width: 50%;
   text-align: center;
+}
+
+@media (max-width: 1439px) {
+  .awards .heading h1 {
+    line-height: 120px;
+  }
 }
 
 .awards .awardsBody {
@@ -1319,17 +1407,37 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 120vh;
+  height: 100vh;
 }
 
 .booking .form {
   height: 100%;
   width: 50%;
+  padding: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.booking .form .formCover {
+  height: 90%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1337,7 +1445,12 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 50px;
+}
+
+@media (max-width: 1439px) {
+  .booking .form .formCover {
+    height: 100%;
+  }
 }
 
 .booking .form h2 {
@@ -1346,6 +1459,8 @@ header .cover nav .hamburgerMenu div {
 
 .booking .form .bookingNav {
   height: 20%;
+  width: 70%;
+  margin-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1363,10 +1478,24 @@ header .cover nav .hamburgerMenu div {
 
 .booking .form .bookingNav p {
   margin-right: 30px;
+  font-size: 30px;
+}
+
+@media (max-width: 1439px) {
+  .booking .form .bookingNav p {
+    font-size: 20px;
+  }
 }
 
 .booking .form .formBody {
   height: 65%;
+  width: 100%;
+}
+
+@media (max-width: 1439px) {
+  .booking .form .formBody {
+    height: 75%;
+  }
 }
 
 .booking .BookingImg {

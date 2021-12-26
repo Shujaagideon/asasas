@@ -4,10 +4,12 @@
     height: 140vh;
     .section3Cover{
         height: 100%;
-        width: 90%;
-        @include flexing(center, space-around, column);
+        width: 100%;
+        padding-left: 8%;
+        @include flexing(center, center, column);
+
         .heading{
-            height: 10%;
+            height: 8%;
             width: 100%;
             @include flexing(center, center, column);
             text-align: center;
@@ -19,14 +21,15 @@
 
             .sliderNav{
                 height: 10%;
-                width: 50%;
+                width: 60%;
                 .cover{
+                    height: 100%;
                     width: 100%;
-                    @include flexing(center, space-around, row);
+                    @include flexing(center, space-between, row);
                 }
                 p{
                     font-size: 18px;
-                    margin-right: 10px;
+                    margin-right: 50px;
                 }
             }
             .sliderBody{
@@ -38,8 +41,9 @@
                 .left{
                     height: 100%;
                     width: 30%;
+                    margin-right: 30px;
                     .sliderBtns{
-                        height: 50%;
+                        height: 40%;
                         display: flex;
                         padding-top: 30px;
                         .btn{
@@ -55,19 +59,26 @@
                     }
                     .sliderText{
                         height: 50%;
-                        
+                        @include media('<desktop'){
+                            p{
+                                font-size: 14px;
+                            }
+                        }
                     }
                 }
                 .right{
                     height: 100%;
                     width: 80%;
-                    @include flexing( '', space-around, row);
+                    margin-left: 50px;
+                    padding-left: 50px;
+                    @include flexing( '', space-between, row);
                     .firstSlide{
                         margin-top: 30px;
+                        margin-right: 50px;
                     }
                     .carousel{
+                        width: 50%;
                         height: 80%;
-                        width: 35%;
                         overflow: hidden;
                         display: flex;
                         img{
@@ -78,14 +89,20 @@
                         }
                     }
                     .secondSlide{
-                        width: 32%;
+                        width: 25%;
+                    }
+                    @include media('>desktop'){
+                        padding-left: 140px;
+                       .firstSlide{
+                            width: 60%;
+                        }
                     }
                 }
                 .bottom{
                     position: absolute;
                     bottom: 0;
-                    height: 10%;
-                    width: 100%;
+                    height: 8%;
+                    width: 90%;
                     background: inherit !important;
                     .top{
                         width: 100%;

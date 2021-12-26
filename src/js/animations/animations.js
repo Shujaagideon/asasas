@@ -90,10 +90,10 @@ export default class Animations {
             let newText = new SplitTextJS(text);
             this.textAnim(newText.chars);
         });
-        [...document.querySelectorAll('.text h3')].forEach( text=>{
-            let newText = new SplitTextJS(text);
-            this.textAnim(newText.chars);
-        });
+        // [...document.querySelectorAll('.text h3')].forEach( text=>{
+        //     let newText = new SplitTextJS(text);
+        //     this.textAnim(newText.chars);
+        // });
         [...document.querySelectorAll('.text h5')].forEach(text => {
             let newText = new SplitTextJS(text);
             this.textAnim(newText.chars);
@@ -115,8 +115,8 @@ export default class Animations {
         let circleCover = document.querySelector('.circleExpand');
 
         
-        let newText = new SplitTextJS(document.querySelector('.section2Cover .text h3'));
-        gsap.from(newText.chars,{
+        // let newText = new SplitTextJS(document.querySelector('.section2Cover .text h3'));
+        gsap.from('.section2Cover .text h3',{
             scrollTrigger: {
                 trigger: '.section2Cover .text h3',
                 scroller: '#smoothScroll',
@@ -154,23 +154,23 @@ export default class Animations {
             opacity: 0,
             delay: 1
         })
-        this.section4Tl.to('.storiesBody .img1', {
-            rotateZ: -4,
-            // duration: 0.6,
-            ease: 'none',
-            y: -150
-        })
-        this.section4Tl.to('.storiesBody .img3', {
-            rotateZ: 10,
-            delay: -0.5,
-            ease: 'none',
-            y: -150
-        })
-        this.section4Tl.to('.storiesBody .img2', {
-            rotateZ: -10,
-            delay: -0.5,
-            ease: 'none',
-            y: -150
-        })
+        // this.section4Tl.to('.storiesBody .img1', {
+        //     rotateZ: -4,
+        //     // duration: 0.6,
+        //     ease: 'none',
+        //     y: -150
+        // })
+        // this.section4Tl.to('.storiesBody .img3', {
+        //     rotateZ: 10,
+        //     delay: -0.5,
+        //     ease: 'none',
+        //     y: -150
+        // })
+        // this.section4Tl.to('.storiesBody .img2', {
+        //     rotateZ: -10,
+        //     delay: -0.5,
+        //     ease: 'none',
+        //     y: -150
+        // })
     }
 }

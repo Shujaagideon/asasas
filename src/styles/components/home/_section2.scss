@@ -2,26 +2,34 @@
     // background: url('../assets/background.svg');
     background-size: cover;
     color: $color-black;
-    margin-top: 100px;
     height: 160vh;
+    position: relative;
+    svg{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0.1;
+        z-index: -1;
+    }
     .section2Cover{
+        margin-top: 200px;
         height: 100%;
         width: 100%;
         @include flexing(flex-start, space-between, column);
         .text{
             padding-left: 80px;
-            width: 56%;
+            width: 65%;
             height: 18%;
             h3{
                 font-size: 55px;
                 line-height: 60px;
             }
             @include media('>=desktop'){
-                width: 60%;
+                width: 65%;
                 padding-left: 100px;
                 h3{
                     font-size: 80px;
-                    line-height: 98px;
+                    line-height: 90px;
                 }
             }
         }

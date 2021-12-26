@@ -2,9 +2,15 @@
     background-color: #000;
     color: $color-white;
     @include flexing(center, space-around, column); 
+    padding-top: 50px;
     .heading{
-        width: 40%;
+        width: 50%;
         text-align: center;
+        @include media('<desktop'){
+            h1{
+                line-height: 120px;
+            }
+        }
     }
     .awardsBody{
         height: 50%;

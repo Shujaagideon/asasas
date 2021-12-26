@@ -1,24 +1,41 @@
 .booking{
     @include flexing(flex-start, center, row);
-    height: 120vh;
+    height: 100vh;
     .form{
         height: 100%;
         width: 50%;
-        @include flexing(flex-start, space-around, column);
         padding: 50px;
+        @include flexing(center, center, row);
+        .formCover{
+            height: 90%;
+            width: 80%;
+            @include flexing(flex-start, center, column);
+            @include media('<desktop'){
+                height: 100%;
+            }
+        }
         h2{
             height: 10%;
         }
         .bookingNav{
             height: 20%;
-            // background: #000;
+            width: 70%;
+            margin-right: 20px;
             @include flexing(center, flex-start,row);
             p{
                 margin-right: 30px;
+                font-size: 30px;
+                @include media('<desktop'){
+                    font-size: 20px;
+                }
             }
         }
         .formBody{
             height: 65%;
+            width: 100%;
+            @include media('<desktop'){
+                height: 75%;
+            }
         }
     }
     .BookingImg{

@@ -176,7 +176,6 @@ p {
 
 body {
   overscroll-behavior: none;
-  overflow: hidden;
   color: #2a2a2a;
   font-family: 'Graphik';
 }
@@ -230,12 +229,18 @@ body .imgfilter {
           flex-direction: row;
   background-color: #ffffff;
   color: #07424D;
-  font-family: 'Graphik-Light';
-  font-size: 14px;
-  font-weight: 200;
+  font-family: 'Graphik-Regular';
+  font-size: 16px;
   border-radius: 50px;
   padding: 8px 18px;
   cursor: pointer;
+}
+
+@media (max-width: 1439px) {
+  .button {
+    padding: 6px 15px;
+    font-size: 14px;
+  }
 }
 
 .logo {
@@ -287,7 +292,7 @@ body .imgfilter {
   height: 100%;
   width: 250px;
   margin-right: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #ffffff80;
   padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -490,17 +495,17 @@ form button:hover {
 }
 
 .footer .sectCover .sect p {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff80;
   font-size: 16px;
 }
 
 .footer .sectCover .sect:nth-child(3) {
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid #ffffff80;
 }
 
 .footer .footerBottom {
   width: 95%;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid #ffffff80;
   color: #5D5D5D;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,7 +545,6 @@ header {
   z-index: 10;
   height: 10vh;
   width: 100%;
-  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -613,10 +617,10 @@ header .cover nav .hamburgerMenu div {
 
 .intro {
   color: #C78F66;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
+  display: none;
 }
 
 .intro h1 {
@@ -631,14 +635,6 @@ header .cover nav .hamburgerMenu div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 center;
-  -webkit-mask: url("../assets/landingFlower.svg");
-          mask: url("../assets/landingFlower.svg");
-  -webkit-mask-size: 0%;
-          mask-size: 0%;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
 }
 
 .darkBackground {
@@ -675,11 +671,8 @@ header .cover nav .hamburgerMenu div {
 
 .darkBackground .cover .rightContent {
   width: 30%;
-  padding-top: 40px;
   height: 100%;
   background-color: #07424D;
-  -webkit-transform: translate3D(100%, 0, 0);
-          transform: translate3D(100%, 0, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -713,12 +706,8 @@ header .cover nav .hamburgerMenu div {
   width: 100%;
 }
 
-.darkBackground .cover .rightContent .cont .icon {
-  opacity: 0;
-}
-
 .darkBackground .cover .rightContent .cont .cover {
-  height: 70%;
+  height: 60%;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -742,8 +731,21 @@ header .cover nav .hamburgerMenu div {
   width: 25px;
 }
 
+@media (max-width: 1439px) {
+  .darkBackground .cover .rightContent .cont .cover img {
+    height: 30px;
+    width: 18px;
+  }
+}
+
 .darkBackground .cover .rightContent .cont .cover .icon2 {
   width: 43px;
+}
+
+@media (max-width: 1439px) {
+  .darkBackground .cover .rightContent .cont .cover .icon2 {
+    width: 38px;
+  }
 }
 
 .darkBackground .cover .rightContent .cont .cover .text {
@@ -760,7 +762,7 @@ header .cover nav .hamburgerMenu div {
 
 .darkBackground .cover .rightContent .cont .cover .text p {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff80;
 }
 
 @media (min-width: 1365px) {
@@ -795,12 +797,6 @@ header .cover nav .hamburgerMenu div {
   cursor: pointer;
 }
 
-@media (min-width: 1365px) {
-  .darkBackground .cover .rightContent .cont .cover .btn {
-    bottom: -5%;
-  }
-}
-
 .darkBackground .cover .rightContent .bottom {
   background-color: #1F4753;
 }
@@ -827,9 +823,8 @@ header .cover nav .hamburgerMenu div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -840,7 +835,7 @@ header .cover nav .hamburgerMenu div {
 }
 
 .window .section2Cover .text {
-  width: 75%;
+  width: 70%;
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-left: 100px;
@@ -848,6 +843,7 @@ header .cover nav .hamburgerMenu div {
 }
 
 .window .section2Cover .text h3 {
+  font-family: 'Graphik-Light';
   font-size: 60px;
   line-height: 68px;
 }
@@ -855,7 +851,6 @@ header .cover nav .hamburgerMenu div {
 @media (min-width: 1440px) {
   .window .section2Cover .text {
     width: 65%;
-    padding-left: 100px;
   }
   .window .section2Cover .text h3 {
     font-size: 80px;
@@ -931,7 +926,7 @@ header .cover nav .hamburgerMenu div {
   text-align: center;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1364px) {
   .window .section2Cover .circleExpand .circle {
     height: 800px;
     width: 800px;
@@ -941,10 +936,11 @@ header .cover nav .hamburgerMenu div {
 .window .section2Cover .windowText {
   height: 18%;
   width: 30%;
-  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .window .section2Cover .windowText p {
+  color: #58595B;
   font-size: 16px;
   text-align: center;
 }
@@ -963,7 +959,6 @@ header .cover nav .hamburgerMenu div {
 .slideSection .section3Cover {
   height: 100%;
   width: 100%;
-  padding-left: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1017,7 +1012,7 @@ header .cover nav .hamburgerMenu div {
 
 .slideSection .section3Cover .slider .sliderNav {
   height: 10%;
-  width: 60%;
+  width: 55%;
 }
 
 .slideSection .section3Cover .slider .sliderNav .cover {
@@ -1039,8 +1034,14 @@ header .cover nav .hamburgerMenu div {
 }
 
 .slideSection .section3Cover .slider .sliderNav p {
-  font-size: 18px;
+  font-size: 30px;
   margin-right: 50px;
+}
+
+@media (max-width: 1439px) {
+  .slideSection .section3Cover .slider .sliderNav p {
+    font-size: 20px;
+  }
 }
 
 .slideSection .section3Cover .slider .sliderBody {
@@ -1051,6 +1052,7 @@ header .cover nav .hamburgerMenu div {
   display: flex;
   overflow: hidden;
   position: relative;
+  padding-left: 8%;
 }
 
 .slideSection .section3Cover .slider .sliderBody .left {
@@ -1072,7 +1074,7 @@ header .cover nav .hamburgerMenu div {
   height: 60px;
   width: 60px;
   border-radius: 50px;
-  border: 1px solid #C78F66;
+  border: 1px solid #5D5D5D;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1086,7 +1088,7 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: #C78F66;
+  color: #5D5D5D;
   cursor: pointer;
 }
 
@@ -1094,9 +1096,21 @@ header .cover nav .hamburgerMenu div {
   height: 50%;
 }
 
+.slideSection .section3Cover .slider .sliderBody .left .sliderText p {
+  font-size: 16px;
+  margin-top: 20px;
+  line-height: 22px;
+  color: #58595B;
+}
+
 @media (max-width: 1439px) {
+  .slideSection .section3Cover .slider .sliderBody .left .sliderText h4 {
+    font-size: 50px;
+    line-height: 60px;
+  }
   .slideSection .section3Cover .slider .sliderBody .left .sliderText p {
     font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -1105,6 +1119,8 @@ header .cover nav .hamburgerMenu div {
   width: 80%;
   margin-left: 50px;
   padding-left: 50px;
+  position: relative;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1118,6 +1134,37 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.slideSection .section3Cover .slider .sliderBody .right .customSliderCursor {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #C78F66;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: 5;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.slideSection .section3Cover .slider .sliderBody .right .customSliderCursor p {
+  font-size: 16px;
 }
 
 .slideSection .section3Cover .slider .sliderBody .right .firstSlide {
@@ -1143,7 +1190,7 @@ header .cover nav .hamburgerMenu div {
 }
 
 .slideSection .section3Cover .slider .sliderBody .right .secondSlide {
-  width: 25%;
+  width: 30%;
 }
 
 @media (min-width: 1441px) {
@@ -1159,8 +1206,7 @@ header .cover nav .hamburgerMenu div {
   position: absolute;
   bottom: 0;
   height: 8%;
-  width: 90%;
-  background: inherit !important;
+  width: 85%;
 }
 
 .slideSection .section3Cover .slider .sliderBody .bottom .top {
@@ -1175,10 +1221,11 @@ header .cover nav .hamburgerMenu div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: center;
-          flex-direction: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 20px;
   color: #C78F66;
 }
 
@@ -1194,13 +1241,23 @@ header .cover nav .hamburgerMenu div {
   background: #1F4753;
 }
 
-.slideSection .section3Cover .slider .sliderBody .bottom .bottom {
+.slideSection .section3Cover .slider .sliderBody .bottom .top p {
+  font-size: 30px;
+}
+
+@media (max-width: 1439px) {
+  .slideSection .section3Cover .slider .sliderBody .bottom .top p {
+    font-size: 20px;
+  }
+}
+
+.slideSection .section3Cover .slider .sliderBody .bottom .bottomStrip {
   background: #e0e0e0;
   height: 2px;
   border-radius: 50px;
 }
 
-.slideSection .section3Cover .slider .sliderBody .bottom .bottom div {
+.slideSection .section3Cover .slider .sliderBody .bottom .bottomStrip div {
   height: 100%;
   width: 20%;
   background-color: #1F4753;
@@ -1227,14 +1284,19 @@ header .cover nav .hamburgerMenu div {
 }
 
 .stories .heading {
+  z-index: 1;
   padding-top: 100px;
 }
 
 .stories .heading h1 {
-  line-height: 110px;
+  line-height: 168px;
 }
 
 .stories .heading p {
+  font-family: 'Graphik';
+  font-size: 30px;
+  line-height: 38px;
+  text-transform: capitalize;
   margin-bottom: 35px;
 }
 
@@ -1242,7 +1304,41 @@ header .cover nav .hamburgerMenu div {
   height: 70%;
   width: 100%;
   width: 100%;
+  z-index: 1;
   position: relative;
+}
+
+.stories .storiesBody .customStoriesCursor {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #C78F66;
+  z-index: 5;
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.stories .storiesBody .customStoriesCursor p {
+  font-size: 16px;
+  line-height: none;
+  margin-bottom: none !important;
 }
 
 .stories .storiesBody .imgCover {
@@ -1265,8 +1361,8 @@ header .cover nav .hamburgerMenu div {
   left: 25%;
   height: 75%;
   top: 50%;
-  -webkit-transform: translate(0, -50%) rotateZ(5deg);
-          transform: translate(0, -50%) rotateZ(5deg);
+  -webkit-transform: translate(0, -50%) rotateZ(3deg);
+          transform: translate(0, -50%) rotateZ(3deg);
   width: 20%;
 }
 
@@ -1282,8 +1378,8 @@ header .cover nav .hamburgerMenu div {
   height: 75%;
   width: 20%;
   top: 50%;
-  -webkit-transform: translate(0, -50%) rotateZ(-5deg);
-          transform: translate(0, -50%) rotateZ(-5deg);
+  -webkit-transform: translate(0, -50%) rotateZ(-3deg);
+          transform: translate(0, -50%) rotateZ(-3deg);
 }
 
 @media (min-width: 1441px) {
@@ -1302,8 +1398,10 @@ header .cover nav .hamburgerMenu div {
   }
 }
 
-.stories p {
+.stories .storiesBottom {
+  font-family: 'Graphik';
   margin-bottom: 50px;
+  text-transform: capitalize;
 }
 
 @media (min-width: 1441px) {
@@ -1312,7 +1410,6 @@ header .cover nav .hamburgerMenu div {
   }
   .stories p {
     font-size: 30px;
-    line-height: 38px;
   }
 }
 

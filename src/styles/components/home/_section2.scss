@@ -15,19 +15,19 @@
         margin-top: 100px;
         height: 100%;
         width: 100%;
-        @include flexing(center, space-evenly, column);
+        @include flexing(center, space-around, column);
         .text{
-            width: 75%;
+            width: 70%;
             align-self: flex-start;
             margin-left: 100px;
             height: 20%;
             h3{
+                font-family: 'Graphik-Light';
                 font-size: 60px;
                 line-height: 68px;
             }
             @include media('>=desktop'){
                 width: 65%;
-                padding-left: 100px;
                 h3{
                     font-size: 80px;
                     line-height: 90px;
@@ -70,7 +70,7 @@
                     text-align: center;
                 }
             }
-            @include media('>=desktop'){
+            @include media('>=laptop'){
                 .circle{
                     height: 800px;
                     width: 800px;
@@ -80,8 +80,9 @@
         .windowText{
             height: 18%;
             width: 30%;
-            padding-bottom: 50px;
+            padding-top: 50px;
             p{
+                color: $color-lightText;
                 font-size: 16px;
                 text-align: center;
                 @include media('<desktop'){

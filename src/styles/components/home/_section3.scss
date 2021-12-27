@@ -5,9 +5,8 @@
     .section3Cover{
         height: 100%;
         width: 100%;
-        padding-left: 8%;
         @include flexing(center, center, column);
-
+        
         .heading{
             height: 8%;
             width: 100%;
@@ -21,15 +20,19 @@
 
             .sliderNav{
                 height: 10%;
-                width: 60%;
+                width: 55%;
+                // background: #000;
                 .cover{
                     height: 100%;
                     width: 100%;
                     @include flexing(center, space-between, row);
                 }
                 p{
-                    font-size: 18px;
+                    font-size: 30px;
                     margin-right: 50px;
+                    @include media('<desktop'){
+                        font-size: 20px;
+                    }
                 }
             }
             .sliderBody{
@@ -38,6 +41,7 @@
                 display: flex;
                 overflow: hidden;
                 position: relative;
+                padding-left: 8%;
                 .left{
                     height: 100%;
                     width: 30%;
@@ -51,17 +55,29 @@
                             height: 60px;
                             width: 60px;
                             border-radius: 50px;
-                            border: 1px solid $color-gold;
+                            border: 1px solid $color-gray;
                             @include flexing(center, center, row);
-                            color: $color-gold;
+                            color: $color-gray;
                             cursor: pointer;
                         }
                     }
                     .sliderText{
                         height: 50%;
+                        
+                        p{
+                            font-size: 16px;
+                            margin-top: 20px;
+                            line-height: 22px;
+                            color: $color-lightText;
+                        }
                         @include media('<desktop'){
+                            h4{
+                                font-size: 50px;
+                                line-height: 60px;
+                            }
                             p{
                                 font-size: 14px;
+                                line-height: 16px;
                             }
                         }
                     }
@@ -71,7 +87,26 @@
                     width: 80%;
                     margin-left: 50px;
                     padding-left: 50px;
+                    position: relative;
+                    overflow: hidden;
                     @include flexing( '', space-between, row);
+
+                    .customSliderCursor{
+                        position: absolute;
+                        height: 120px;
+                        width: 120px;
+                        border-radius: 50%;
+                        color: $color-white;
+                        background: $color-gold;
+                        @include flexing(center, center, row);
+                        z-index: 5;
+                        top: 50%;
+                        left: 40%;
+                        transform: translate(-50%, -50%);
+                        p{
+                            font-size: 16px;
+                        }
+                    }
                     .firstSlide{
                         margin-top: 30px;
                         margin-right: 50px;
@@ -89,7 +124,7 @@
                         }
                     }
                     .secondSlide{
-                        width: 25%;
+                        width: 30%;
                     }
                     @include media('>desktop'){
                         padding-left: 140px;
@@ -102,12 +137,12 @@
                     position: absolute;
                     bottom: 0;
                     height: 8%;
-                    width: 90%;
-                    background: inherit !important;
+                    width: 85%;
                     .top{
                         width: 100%;
                         height: 50%;
-                        @include flexing(center, space-between, center);
+                        @include flexing(center, space-between, row);
+                        margin-bottom: 20px;
                         color: $color-gold;
                         span{
                             height: 10px;
@@ -119,8 +154,14 @@
                         .active{
                             background: $color-teal-2;
                         }
+                        p{
+                            font-size: 30px;
+                            @include media('<desktop'){
+                                font-size: 20px;
+                            }
+                        }
                     }
-                    .bottom {
+                    .bottomStrip{
                         background: $color-black-light;
                         height: 2px;
                         border-radius: 50px;

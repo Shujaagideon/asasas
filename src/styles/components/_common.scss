@@ -18,14 +18,17 @@
     @include flexing(center, center, row);
     background-color: $color-white;
     color: $color-teal-1;
-    font-family: 'Graphik-Light';
-    font-size: 14px;
-    font-weight: 200;
+    font-family: 'Graphik-Regular';
+    font-size: 16px;
     border-radius: 50px;
     padding: 8px 18px;
     cursor: pointer;
     &:hover{
         
+    }
+    @include media('<desktop'){
+        padding: 6px 15px;
+        font-size: 14px;
     }
 }
 .logo{

@@ -12,11 +12,16 @@
         z-index: 0;
     }
     .heading{
+        z-index: 1;
         padding-top: 100px;
         h1{
-            line-height: 110px;
+            line-height: 168px;
         }
         p{
+            font-family: 'Graphik';
+            font-size: 30px;
+            line-height: 38px;
+            text-transform: capitalize;
             margin-bottom: 35px;
         }
     }
@@ -24,7 +29,26 @@
         height: 70%;
         width: 100%;
         width: 100%;
+        z-index: 1;
         position: relative;
+        .customStoriesCursor{
+            position: absolute;
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            color: $color-white;
+            background: $color-gold;
+            z-index: 5;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            @include flexing(center, center, row);
+            p{
+                font-size: 16px;
+                line-height: none;
+                margin-bottom: none !important;
+            }
+        }
         .imgCover{
             height: 85%;
             width: 25%;
@@ -42,7 +66,7 @@
             left: 25%;
             height: 75%;
             top: 50%;
-            transform: translate(0,-50%) rotateZ(5deg);
+            transform: translate(0,-50%) rotateZ(3deg);
             width: 20%;
         }
         .img2{
@@ -55,7 +79,7 @@
             height: 75%;
             width: 20%;
             top: 50%;
-            transform: translate(0,-50%) rotateZ(-5deg);
+            transform: translate(0,-50%) rotateZ(-3deg);
         }
         @include media('>desktop'){
             font-size: 30px;
@@ -71,8 +95,10 @@
             }
         }
     }
-    p{
+    .storiesBottom{
+        font-family: 'Graphik';
         margin-bottom: 50px;
+        text-transform: capitalize;
     }
     @include media('>desktop'){
         h1{
@@ -80,7 +106,6 @@
         }
         p{
             font-size: 30px;
-            line-height: 38px;
         }
             
     }

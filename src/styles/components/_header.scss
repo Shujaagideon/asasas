@@ -3,7 +3,7 @@ header{
     z-index: 10;
     height: 10vh;
     width: 100%;
-    opacity: 0;
+    // opacity: 0;
     @include flexing(center, center, row);
     .cover{
         height: 100%;

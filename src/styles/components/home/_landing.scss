@@ -6,10 +6,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position:0 center;
-    mask: url('../assets/landingFlower.svg');
-    mask-size: 0%;
-    mask-repeat: no-repeat;
-    mask-position: center;
+    // mask: url('../assets/landingFlower.svg');
+    // mask-size: 0%;
+    // mask-repeat: no-repeat;
+    // mask-position: center;
 }
 
 .darkBackground{
@@ -29,20 +29,20 @@
         }
         .rightContent{
             width: 30%;
-            padding-top: 40px;
+            // padding-top: 0px;
             height: 100%;
             background-color: $color-teal-1;
-            transform: translate3D(100%,0,0);
+            // transform: translate3D(100%,0,0);
             @include flexing(flex-end, flex-end, column);
             .cont{
                 height: 50%;
                 @include flexing(center, center, row);
                 width: 100%;
-                .icon{
-                    opacity: 0;
-                }
+                // .icon{
+                //     // opacity: 0;
+                // }
                 .cover{
-                    height: 70%;
+                    height: 60%;
                     width: 90%;
                     @include flexing(flex-start, center, column);
                     padding-left: 40px;
@@ -50,9 +50,16 @@
                     img{
                         height: 39px;
                         width: 25px;
+                        @include media('<desktop'){
+                            height: 30px;
+                            width: 18px;
+                        }
                     }
                     .icon2{
                         width: 43px;
+                        @include media('<desktop'){
+                            width: 38px;
+                        }
                     }
                     .text{
                         margin-top: 30px;
@@ -84,7 +91,6 @@
                         color: $color-white;
                         cursor: pointer;
                         @include media('>laptop'){
-                            bottom: -5%;
                         }
                     }
                 }

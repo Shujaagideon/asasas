@@ -20,7 +20,10 @@
 
             .sliderNav{
                 height: 10%;
-                width: 55%;
+                width: 60%;
+                @include media('>=desktop'){
+                    width: 55%;
+                }
                 // background: #000;
                 .cover{
                     height: 100%;
@@ -77,7 +80,7 @@
                             }
                             p{
                                 font-size: 14px;
-                                line-height: 16px;
+                                line-height: 18px;
                             }
                         }
                     }

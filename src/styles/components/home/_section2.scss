@@ -70,7 +70,7 @@
                     text-align: center;
                 }
             }
-            @include media('>=laptop'){
+            @include media('>=desktop'){
                 .circle{
                     height: 800px;
                     width: 800px;

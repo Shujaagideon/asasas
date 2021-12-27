@@ -262,7 +262,6 @@ body .imgfilter {
 
 @media (max-width: 1439px) {
   .button {
-    padding: 6px 15px;
     font-size: 14px;
   }
 }
@@ -979,7 +978,7 @@ header .cover nav .hamburgerMenu div {
   text-align: center;
 }
 
-@media (min-width: 1364px) {
+@media (min-width: 1440px) {
   .window .section2Cover .circleExpand .circle {
     height: 800px;
     width: 800px;
@@ -1065,7 +1064,13 @@ header .cover nav .hamburgerMenu div {
 
 .slideSection .section3Cover .slider .sliderNav {
   height: 10%;
-  width: 55%;
+  width: 60%;
+}
+
+@media (min-width: 1440px) {
+  .slideSection .section3Cover .slider .sliderNav {
+    width: 55%;
+  }
 }
 
 .slideSection .section3Cover .slider .sliderNav .cover {
@@ -1163,7 +1168,7 @@ header .cover nav .hamburgerMenu div {
   }
   .slideSection .section3Cover .slider .sliderBody .left .sliderText p {
     font-size: 14px;
-    line-height: 16px;
+    line-height: 18px;
   }
 }
 

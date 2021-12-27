@@ -22,8 +22,8 @@
                 }
         }
         .bookingNav{
-            height: 20%;
-            width: 70%;
+            height: 15%;
+            width: 100%;
             margin-right: 20px;
             @include flexing(center, flex-start,row);
             p{

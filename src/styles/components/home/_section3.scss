@@ -173,6 +173,12 @@
                     }}
                 }
             }
+            @include media('>desktop'){
+                height: 70%;
+                .right{
+                    margin-left: 0px;
+                }
+            }
         }
     }
 }

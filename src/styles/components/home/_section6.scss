@@ -4,8 +4,9 @@
     @include flexing(center, space-around, column); 
     padding-top: 50px;
     .heading{
-        width: 50%;
+        width: 60%;
         text-align: center;
+        @include flexing(center, center, row);
         @include media('<desktop'){
             h1{
                 line-height: 120px;

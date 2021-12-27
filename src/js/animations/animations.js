@@ -24,16 +24,16 @@ export default class Animations {
             }
         });
         this.section2Tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.window',
-                endTrigger: '.slideSection',
-                scroller: '#smoothScroll',
-                start: 'top -40%',
-                scrub: 1.5,
-                pin: true,
-                // pinSpacing: false,
-                end: this.section2.clientHeight + 20,
-            },
+            // scrollTrigger: {
+            //     trigger: '.window',
+            //     endTrigger: '.slideSection',
+            //     scroller: '#smoothScroll',
+            //     start: 'top -40%',
+            //     scrub: 1.5,
+            //     pin: true,
+            //     // pinSpacing: false,
+            //     end: this.section2.clientHeight + 20,
+            // },
         });
         this.section4Tl = gsap.timeline({
             scrollTrigger: {
@@ -130,30 +130,30 @@ export default class Animations {
             ease: 'Power2.easeOut',
             stagger: 0.01,
         })
-        this.section2Tl.to('.circle',{
-            height: `${circleCover.clientHeight}px`,
-            width: `${circleCover.clientWidth}px`,
-            borderRadius: 0,
-            duration: 0.6,
-            ease: 'none',
-        })
-        this.section2Tl.to('.circle .cover',{
-            duration: 0.4,
-            filter: 0,
-            css:{
-                backdropFilter: 'blur(0) brightness(100%)',
-            }
-        })
-        this.section2Tl.to('.circle img', {
-            duration: 0.4,
-            opacity: 0,
-            delay: -1
-        })
-        this.section2Tl.to('.circle h6', {
-            duration: 0.6,
-            opacity: 0,
-            delay: 1
-        })
+        // this.section2Tl.to('.circle',{
+        //     height: `${circleCover.clientHeight}px`,
+        //     width: `${circleCover.clientWidth}px`,
+        //     borderRadius: 0,
+        //     duration: 0.6,
+        //     ease: 'none',
+        // })
+        // this.section2Tl.to('.circle .cover',{
+        //     duration: 0.4,
+        //     filter: 0,
+        //     css:{
+        //         backdropFilter: 'blur(0) brightness(100%)',
+        //     }
+        // })
+        // this.section2Tl.to('.circle img', {
+        //     duration: 0.4,
+        //     opacity: 0,
+        //     delay: -1
+        // })
+        // this.section2Tl.to('.circle h6', {
+        //     duration: 0.6,
+        //     opacity: 0,
+        //     delay: 1
+        // })
         // this.section4Tl.to('.storiesBody .img1', {
         //     rotateZ: -4,
         //     // duration: 0.6,

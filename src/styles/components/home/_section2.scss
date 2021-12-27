@@ -12,17 +12,18 @@
         z-index: -1;
     }
     .section2Cover{
-        margin-top: 200px;
+        margin-top: 100px;
         height: 100%;
         width: 100%;
-        @include flexing(flex-start, space-between, column);
+        @include flexing(center, space-evenly, column);
         .text{
-            padding-left: 80px;
-            width: 65%;
-            height: 18%;
+            width: 75%;
+            align-self: flex-start;
+            margin-left: 100px;
+            height: 20%;
             h3{
-                font-size: 55px;
-                line-height: 60px;
+                font-size: 60px;
+                line-height: 68px;
             }
             @include media('>=desktop'){
                 width: 65%;
@@ -34,7 +35,7 @@
             }
         }
         .circleExpand{
-            height: 75%;
+            height: 50%;
             width:100%;
             @include flexing(center, center, row);
             .circle{
@@ -73,6 +74,18 @@
                 .circle{
                     height: 800px;
                     width: 800px;
+                }
+            }
+        }
+        .windowText{
+            height: 18%;
+            width: 30%;
+            padding-bottom: 50px;
+            p{
+                font-size: 16px;
+                text-align: center;
+                @include media('<desktop'){
+                    font-size: 14px;
                 }
             }
         }

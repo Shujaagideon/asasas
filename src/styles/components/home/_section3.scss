@@ -172,11 +172,11 @@
                         border-radius: 30px;
                     }}
                 }
-            }
-            @include media('>desktop'){
-                height: 70%;
-                .right{
-                    margin-left: 0px;
+                @include media('>desktop'){
+                    height: 60%;
+                    .right{
+                        margin-left: 0px;
+                    }
                 }
             }
         }

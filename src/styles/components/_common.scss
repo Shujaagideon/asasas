@@ -175,7 +175,7 @@ form{
         .sect{
             height: 80%;
             width: 18%;
-            .sectBody{
+            div{
                 height: 50%;
                 @include flexing(flex-start, space-around, column);
                 p{
@@ -197,7 +197,7 @@ form{
         height: 20%;
         border-top: 1px solid $color-white-50;
         color: $color-white;
-        @include flexing(center, space-between row);
+        @include flexing(center, space-between, row);
         p{
             font-size: 14px;
         }

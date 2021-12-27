@@ -524,13 +524,29 @@ form button:hover {
   width: 18%;
 }
 
-.footer .sectCover .sect h6 {
-  font-size: 20px;
+.footer .sectCover .sect div {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.footer .sectCover .sect p {
-  color: #ffffff80;
+.footer .sectCover .sect div p {
+  color: #ffffff;
   font-size: 16px;
+}
+
+.footer .sectCover .sect h6 {
+  font-size: 20px;
 }
 
 .footer .sectCover .sect:nth-child(3) {
@@ -546,9 +562,9 @@ form button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-BE;
-      -ms-flex-pack: space-BE;
-          justify-content: space-BE;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1302,10 +1318,10 @@ header .cover nav .hamburgerMenu div {
 }
 
 @media (min-width: 1441px) {
-  .slideSection .section3Cover .slider {
-    height: 70%;
+  .slideSection .section3Cover .slider .sliderBody {
+    height: 60%;
   }
-  .slideSection .section3Cover .slider .right {
+  .slideSection .section3Cover .slider .sliderBody .right {
     margin-left: 0px;
   }
 }

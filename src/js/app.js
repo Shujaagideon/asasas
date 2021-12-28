@@ -177,17 +177,19 @@ void new class {
         this.animations.customCursor(document.querySelector('.storiesBody'), document.querySelector('.customStoriesCursor'), 250);
         this.sliderLink = document.querySelectorAll('.sliderNav .cover .link');
         this.sliderLink.forEach(link=>{
-            // console.log(link.parentElement.children)
             link.addEventListener('click',()=>{
                 this.setActive(link);
-                console.log(document.querySelector('.slideSection'));
                 if(link.innerText === 'Corporate'){
                     document.querySelector('.slideSection').style.background = '#07424D';
                     document.querySelector('.stories').style.background = '#f5f5f5';
+                    document.querySelector('.slideSection').style.color = '#fff';
+                    document.querySelector('.stories').style.color = '#2a2a2a';
                 }
                 else{
                     document.querySelector('.slideSection').style.background = '#f5f5f5';
                     document.querySelector('.stories').style.background = '#07424D';
+                    document.querySelector('.slideSection').style.color = '#2a2a2a';
+                    document.querySelector('.stories').style.color = '#fff';
                 }
             })
         })

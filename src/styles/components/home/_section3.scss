@@ -1,7 +1,7 @@
 
 .slideSection{
-    background-color: $color-gray-light;
     height: 140vh;
+    transition: 0.8s ease background;
     .section3Cover{
         height: 100%;
         width: 100%;

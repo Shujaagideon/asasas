@@ -13,6 +13,10 @@
 }
 .coloredBg{
     background-color: $color-teal-1;
+    color: $color-white;
+}
+.grayBg{
+    background-color: $color-gray-light;
 }
 .button{
     @include flexing(center, center, row);
@@ -37,6 +41,7 @@
     align-items: center;
     font-family: 'LT_5500';
     text-transform: uppercase;
+    margin-right: 20px;
     img{
         margin-right: 5px;
     }

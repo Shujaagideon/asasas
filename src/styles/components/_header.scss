@@ -4,7 +4,7 @@ header{
     height: 10vh;
     width: 100%;
     // opacity: 0;
-    @include flexing(center, center, row);
+    @include flexing(center, center, column);
     .cover{
         height: 100%;
         width: 100%;
@@ -13,6 +13,49 @@ header{
         padding-left: 60px;
         padding-right: 30px;
         
+        .navlist{
+            height: 100%;
+            width: 60%;
+            // padding-left: 30px;
+            @include flexing(center, space-around, row);
+            display: none;
+            ul{
+                height: 100%;
+                width: 80%;
+                margin: 0;
+                padding: 0;
+                margin-right: 20px;
+                @include flexing(center, space-around, row);
+                li{
+                    list-style: none;
+                    a{
+                        font-size: 16px;
+                        line-height: 19px;
+                        font-family: 'Graphik'; 
+                        text-decoration: none;
+                        color: $color-white;
+                        position: relative;
+                    }
+                    .active{
+                        color: $color-gold;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            background-color: $color-gold;
+                            height: 2px;
+                            width: 50%;
+                            bottom: -50%;
+                            left: 50%;
+                            transform: translate3d(-50%, 0, 0);
+                        }
+                    }
+                }
+            }
+            img{
+                height: 24px;
+                width: 24px;
+            }
+        }
         nav{
             width: 25%;
             font-size: 14px;
@@ -34,4 +77,54 @@ header{
             }
         }
     }
+}
+.headerExpand{
+    position: fixed;
+    display: none;
+    top: 10vh;
+    height: 90vh;
+    width: 100%;
+    border-top: 1px solid $color-white-50;
+    backdrop-filter: brightness(50%);
+    z-index: 10;
+    color: $color-white;
+    .content{
+        padding-left: 60px;
+        height: 60%;
+        width: 100%;
+        background-color: $color-teal-1;
+        display: flex;
+        flex-basis: 5;
+        .firstContent{
+            padding-top: 50px;
+            flex: 1.1;
+            border-right: 1px solid $color-white-50;
+            h5{
+                font-family: 'Starling';
+                font-size: 36px;
+                line-height: 43px;
+            }
+            p{
+                width: 80%;
+            }
+        }
+        .middleContent{
+            padding-top: 30px;
+            flex: 1.2;
+            border-right: 1px solid $color-white-50;
+        }
+        .imgContent{
+            flex: 1.1;
+            background: url('../assets/images/landscape.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
+.displayedExpand{
+    display: block;
+}
+.displayedNav{
+    display: flex;
 }

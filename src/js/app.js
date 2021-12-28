@@ -119,6 +119,7 @@ void new class {
                 if (this.loadAnimComplete = true) {
                     this.Start();
                     this.animatedSlider();
+                    this.navigation();
                     this.slider = new Slider();
                 }
             }
@@ -162,21 +163,35 @@ void new class {
     }
 
     setActive(elem){
-        elem.parentNode.children.forEach(child =>{
-            if(child.classList.contains = 'active'){
-                child.classList.remove('active');
+        Array.from(elem.parentElement.children).forEach(child =>{
+            if(child.classList.contains('activeLink')){
+                child.classList.remove('activeLink');
             }
         })
-        elem.classList.add('active');
+        elem.classList.add('activeLink');
     }
 
     Start() {
         this.animations = new Animations(this.introElements.text, this.introElements.config);
         this.animations.customCursor(document.querySelector('.sliderBody .right'), document.querySelector('.customSliderCursor'), 100);
         this.animations.customCursor(document.querySelector('.storiesBody'), document.querySelector('.customStoriesCursor'), 250);
-        if (document.querySelector('.customStoriesCursor').getBoundingClientRect().x > window.innerWidth/2){
-            document.querySelector('.customStoriesCursor p').innerText = 'Next';
-        }
+        this.sliderLink = document.querySelectorAll('.sliderNav .cover .link');
+        this.sliderLink.forEach(link=>{
+            // console.log(link.parentElement.children)
+            link.addEventListener('click',()=>{
+                this.setActive(link);
+                console.log(document.querySelector('.slideSection'));
+                if(link.innerText === 'Corporate'){
+                    document.querySelector('.slideSection').style.background = '#07424D';
+                    document.querySelector('.stories').style.background = '#f5f5f5';
+                }
+                else{
+                    document.querySelector('.slideSection').style.background = '#f5f5f5';
+                    document.querySelector('.stories').style.background = '#07424D';
+                }
+            })
+        })
+
     }
 
     animatedSlider(){
@@ -185,6 +200,23 @@ void new class {
 
         landingSliderBtn.addEventListener('click',()=>{
             this.slider.ImageSlider(landingSliderBtn, document.querySelector('.landingSlideCover'));
+        })
+    }
+
+    navigation(){
+        this.hamburger = document.querySelector('.hamburgerMenu');
+        this.expandedMenu = document.querySelector('.headerExpand');
+        this.navlist = document.querySelector('.navlist');
+        this.header = document.querySelector('header');
+
+        this.hamburger.addEventListener('click',()=>{
+            this.expandedMenu.classList.toggle('displayedExpand');
+            this.navlistclassList.toggle('displayedNav');
+            if (this.expandedMenu.classList.contains('displayedExpand')) {
+                this.header.style.background = '#07424D';
+            } else {
+                this.header.style.background = 'none';
+            }
         })
     }
 

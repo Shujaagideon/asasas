@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <svg class="imgfilter">
-        <filter id="noise" x='0' y='0' width='100%' height='100%'>
+    <svg class="imgfilter" viewBox="50 50 450 450">
+        <filter id="noise" x='0' y='0' width='110%' height='110%'>
             <feTurbulence id="turbulence" baseFrequency='0.02 0.03' numOctaves='1' result='NOISE' />
-            <feDisplacementMap in='SourceGraphic' in2='NOISE' scale='20' />
+            <feDisplacementMap in='SourceGraphic' in2='NOISE' scale='0' />
         </filter>
     </svg>
     <div id="smoothScroll">
@@ -45,6 +45,14 @@
         </header>
         <section class="container coloredBg landing">
             <div class="landingCover" id="bgImg" data-scroll data-scroll-speed='-1.6'>
+                <div class="landingSlideCover" data-carousel>
+                    <div class="landingSlideImage" data-slides>
+                        <img src="../assets/images/boat.jpg" alt="corporate image" data-active >
+                        <img src="../assets/images/landscape.jpg" alt="private image">
+                        <img src="../assets/images/stories1.jpg" alt="private image">
+                        <img src="../assets/images/landscape.jpg" alt="private image">
+                    </div>
+                </div>
                 <div class="wrapper darkBackground" data-scroll data-scroll-speed='1.5'>
                     <div class="cover"> 
                         <div class="left-text">
@@ -75,7 +83,7 @@
                                         <h5>Corporate</h5> 
                                         <p>Growing and preserving your wealth through bespoke portfolio management.</p>
                                     </div>
-                                    <div class="btn landingSliderBtn">
+                                    <div class="btn landingSliderBtn" data-carousel-button='next'>
                                         &rarr;
                                     </div>
                                 </div>
@@ -86,7 +94,7 @@
             </div>
         </section>
         <section class="container window">
-            <svg width="150%" height="100%" viewBox="50 50 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="bgSvgs" width="150%" height="100%" viewBox="50 50 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_859_20357)">
                     <path
                         d="M228.842 486.652C221.1 477.035 200.716 472.665 185.065 472.665C180.598 472.637 176.141 473.01 171.765 473.777C157.045 476.499 144.479 478.945 133.409 481.091C103.725 486.874 85.8142 490.355 70.9266 490.355C58.528 490.355 47.9006 487.986 33.0283 481.889C20.6184 476.745 8.57069 470.982 -3.05307 464.631C-17.4215 457.003 -26.9037 451.966 -39.8979 451.966C-44.6164 452.022 -49.3069 452.598 -53.854 453.68L-53.854 454.622C-49.3091 453.528 -44.618 452.943 -39.8979 452.882C-27.2091 452.882 -17.8337 457.867 -3.61804 465.403C8.04013 471.778 20.1235 477.562 32.5702 482.727C47.5952 488.876 58.3447 491.271 70.9266 491.271C85.9364 491.271 103.893 487.777 133.638 481.994C144.723 479.835 157.274 477.388 171.994 474.68C176.293 473.917 180.675 473.548 185.065 473.581C200.441 473.581 220.428 477.833 227.971 487.162C229.606 489.179 230.612 491.52 230.892 493.964C231.173 496.407 230.719 498.872 229.575 501.123C225.085 511.329 204.09 520.331 185.553 528.286C174.361 533.088 163.779 537.628 158.343 541.841C142.448 554.166 146.265 570.848 152.709 588.839H153.808C147.395 571.032 143.532 554.533 159.03 542.521C164.359 538.4 174.88 533.886 186.011 529.11C204.701 521.076 225.91 511.983 230.552 501.45C231.774 499.065 232.258 496.451 231.959 493.859C231.659 491.267 230.586 488.785 228.842 486.652Z"
@@ -428,7 +436,7 @@
             </div>
         </section>
         <section class="container coloredBg stories">
-            <svg width="150%" height="100%" viewBox="100 100 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="bgSvgs" width="150%" height="100%" viewBox="100 100 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_859_20357)">
                     <path
                         d="M228.842 486.652C221.1 477.035 200.716 472.665 185.065 472.665C180.598 472.637 176.141 473.01 171.765 473.777C157.045 476.499 144.479 478.945 133.409 481.091C103.725 486.874 85.8142 490.355 70.9266 490.355C58.528 490.355 47.9006 487.986 33.0283 481.889C20.6184 476.745 8.57069 470.982 -3.05307 464.631C-17.4215 457.003 -26.9037 451.966 -39.8979 451.966C-44.6164 452.022 -49.3069 452.598 -53.854 453.68L-53.854 454.622C-49.3091 453.528 -44.618 452.943 -39.8979 452.882C-27.2091 452.882 -17.8337 457.867 -3.61804 465.403C8.04013 471.778 20.1235 477.562 32.5702 482.727C47.5952 488.876 58.3447 491.271 70.9266 491.271C85.9364 491.271 103.893 487.777 133.638 481.994C144.723 479.835 157.274 477.388 171.994 474.68C176.293 473.917 180.675 473.548 185.065 473.581C200.441 473.581 220.428 477.833 227.971 487.162C229.606 489.179 230.612 491.52 230.892 493.964C231.173 496.407 230.719 498.872 229.575 501.123C225.085 511.329 204.09 520.331 185.553 528.286C174.361 533.088 163.779 537.628 158.343 541.841C142.448 554.166 146.265 570.848 152.709 588.839H153.808C147.395 571.032 143.532 554.533 159.03 542.521C164.359 538.4 174.88 533.886 186.011 529.11C204.701 521.076 225.91 511.983 230.552 501.45C231.774 499.065 232.258 496.451 231.959 493.859C231.659 491.267 230.586 488.785 228.842 486.652Z"
@@ -825,16 +833,16 @@
                         GlobalEye
                     </div>
                     <div class="icons">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                        <img src="../assets/images/linkedin.png" alt="linkedin icon">
+                        <img src="../assets/images/igIcon.png" alt="instagram icon">
+                        <img src="../assets/images/twit.png" alt="twitter icon">
+                        <img src="../assets/images/fb.png" alt="facebook icon">
+                        <img src="../assets/images/youtube.png" alt="youtube icon">
                     </div>
                 </div>
                 <div class="sect">
                     <h6>Individuals & Families</h6>
-                    <div>
+                    <div class='sectText'>
                         <p>Investment Management</p>
                         <p>Insurance</p>
                         <p>succession</p>
@@ -843,14 +851,14 @@
                 </div>
                 <div class="sect">
                     <h6>Corporates</h6>
-                    <div>
+                    <div class='sectText'>
                         <p>Investment Management</p>
                         <p>Insurance</p>
                         <p>financial advisory</p>
                     </div>
                 </div>
                 <div class="sect">
-                    <div>
+                    <div class='sectText'>
                         <p>About GlobalEye</p>
                         <p>insights</p>
                         <p>careers</p>
@@ -866,7 +874,7 @@
         </div>
     </div>
     <div id="threedContainer"></div>
-    <!-- <script src="../js/app.js"></script> -->
+    <script src="../js/app.js"></script>
 </body>
 
 

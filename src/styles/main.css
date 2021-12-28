@@ -205,6 +205,8 @@ body {
 }
 
 body .imgfilter {
+  margin: 0;
+  padding: 0;
   display: none;
 }
 
@@ -520,10 +522,49 @@ form button:hover {
 
 .footer .sectCover .sect {
   height: 80%;
-  width: 18%;
+  width: 20%;
 }
 
-.footer .sectCover .sect div {
+.footer .sectCover .sect .logo {
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer .sectCover .sect .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer .sectCover .sect .icons img {
+  height: 20px;
+  width: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+}
+
+.footer .sectCover .sect .sectText {
   height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,13 +580,15 @@ form button:hover {
           flex-direction: column;
 }
 
-.footer .sectCover .sect div p {
+.footer .sectCover .sect .sectText p {
   color: #ffffff;
   font-size: 16px;
 }
 
 .footer .sectCover .sect h6 {
-  font-size: 20px;
+  font-size: 24px;
+  font-family: 'Graphik-Semibold';
+  text-transform: capitalize;
 }
 
 .footer .sectCover .sect:nth-child(3) {
@@ -669,10 +712,10 @@ header .cover nav .hamburgerMenu div {
 
 .intro {
   color: #C78F66;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 5;
-  display: none;
 }
 
 .intro h1 {
@@ -683,10 +726,52 @@ header .cover nav .hamburgerMenu div {
 .landingCover {
   height: 100%;
   width: 100%;
-  background: url("./../assets/images/boat1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 center;
+  -webkit-mask: url("../assets/landingFlower.svg");
+          mask: url("../assets/landingFlower.svg");
+  -webkit-mask-size: 0%;
+          mask-size: 0%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  position: relative;
+}
+
+.landingCover .landingSlideCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.landingCover .landingSlideCover .landingSlideImage {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.landingCover .landingSlideCover .landingSlideImage img {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  -webkit-transition: 0.2s opacity ease-in-out;
+  transition: 0.2s opacity ease-in-out;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.landingCover .landingSlideCover .landingSlideImage img[data-active] {
+  opacity: 1;
 }
 
 .darkBackground {
@@ -694,6 +779,7 @@ header .cover nav .hamburgerMenu div {
           backdrop-filter: brightness(70%);
   height: 100%;
   width: 100%;
+  z-index: 1;
 }
 
 .darkBackground .cover {
@@ -1064,7 +1150,7 @@ header .cover nav .hamburgerMenu div {
 
 .slideSection .section3Cover .slider .sliderNav {
   height: 10%;
-  width: 60%;
+  width: 58%;
 }
 
 @media (min-width: 1440px) {
@@ -1179,6 +1265,7 @@ header .cover nav .hamburgerMenu div {
   padding-left: 50px;
   position: relative;
   overflow: hidden;
+  cursor: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1359,6 +1446,12 @@ header .cover nav .hamburgerMenu div {
   line-height: 168px;
 }
 
+@media (max-width: 1439px) {
+  .stories .heading h1 {
+    line-height: 110px;
+  }
+}
+
 .stories .heading p {
   font-family: 'Graphik';
   font-size: 30px;
@@ -1367,12 +1460,20 @@ header .cover nav .hamburgerMenu div {
   margin-bottom: 35px;
 }
 
+@media (max-width: 1364px) {
+  .stories .heading p {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
 .stories .storiesBody {
   height: 70%;
   width: 100%;
   width: 100%;
   z-index: 1;
   position: relative;
+  cursor: none;
 }
 
 .stories .storiesBody .customStoriesCursor {

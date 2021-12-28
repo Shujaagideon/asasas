@@ -174,8 +174,21 @@ form{
         width: 100%;
         .sect{
             height: 80%;
-            width: 18%;
-            div{
+            width: 20%;
+            .logo{
+                height: 20%;
+                @include flexing(flex-start, space-around, row);
+            }
+            .icons{
+                @include flexing(flex-start, space-around, row);
+                img{
+                    height: 20px;
+                    width: 20px;
+                    object-fit: contain;
+                    overflow: hidden;
+                }
+            }
+            .sectText{
                 height: 50%;
                 @include flexing(flex-start, space-around, column);
                 p{
@@ -184,7 +197,9 @@ form{
                 }
             }
             h6{
-                font-size: 20px;
+                font-size: 24px;
+                font-family: 'Graphik-Semibold';
+                text-transform: capitalize;
             }
             &:nth-child(3){
                 border-right: 1px solid $color-white-50;

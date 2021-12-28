@@ -20,7 +20,7 @@
 
             .sliderNav{
                 height: 10%;
-                width: 60%;
+                width: 58%;
                 @include media('>=desktop'){
                     width: 55%;
                 }
@@ -92,6 +92,7 @@
                     padding-left: 50px;
                     position: relative;
                     overflow: hidden;
+                    cursor: none;
                     @include flexing( '', space-between, row);
 
                     .customSliderCursor{

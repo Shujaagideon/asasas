@@ -6,10 +6,10 @@ import Sketch from './animations/ThreeDAnimations'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { sliderData } from "./data/slider1data";
 import SplitTextJS from "split-text-js";
-gsap.registerPlugin(ScrollTrigger);
 import Slider from "./animations/slider";
 
 
+gsap.registerPlugin(ScrollTrigger);
 void new class {
     constructor() {
         this.introElements = {
@@ -39,19 +39,46 @@ void new class {
             leftBtn,
         }
 
-        const scroller = new LocomotiveScroll({
-            el: pageContainer,
-            smooth: true
-        });
+        // const scroller = new LocomotiveScroll({
+        //     el: pageContainer,
+        //     smooth: true
+        // });
+        // scroller.on("scroll", ()=>{
+        //     this.ThreeDProps.currentScroll = scroller.scroll.instance.scroll.y;
+        //     ScrollTrigger.update()
+        // });
 
-        // data passed down to threejs 
+        // ScrollTrigger.scrollerProxy(pageContainer, {
+        //     scrollTop(value) {
+        //         return arguments.length
+        //             ? scroller.scrollTo(value, 0, 0)
+        //             : scroller.scroll.instance.scroll.y;
+        //     },
+        //     getBoundingClientRect() {
+        //         return {
+        //             left: 0,
+        //             top: 0,
+        //             width: window.innerWidth,
+        //             height: window.innerHeight
+        //         };
+        //     },
+        //     pinType: pageContainer.style.transform ? "transform" : "fixed"
+        // });
+        // window.addEventListener("load", function () {
+        //     ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        //     ScrollTrigger.refresh();
+        // });
+
+
+
+        //============data passed down to threejs==========//
         // first declare the variables
         // second deconstruct the sliderData and store values in the variales
         this.titles = [];
         this.descriptions = [];
         this.images = [];
         this.sliderData = sliderData.map(data => {
-            console.log(data)
             this.titles.push(data.title);
             this.descriptions.push(data.description);
             let image = new Image();
@@ -76,39 +103,13 @@ void new class {
                 title: titles,
                 description,
             },
-            currentScroll: scroller.scroll.instance.scroll.y,
+            // currentScroll: scroller.scroll.instance.scroll.y,
 
         };
         
-        scroller.on("scroll", ()=>{
-            this.ThreeDProps.currentScroll = scroller.scroll.instance.scroll.y;
-            ScrollTrigger.update()
-        });
+        //==============load Images First===========//
+        //=============== first have an animation =========================//
 
-        ScrollTrigger.scrollerProxy(pageContainer, {
-            scrollTop(value) {
-                return arguments.length
-                    ? scroller.scrollTo(value, 0, 0)
-                    : scroller.scroll.instance.scroll.y;
-            },
-            getBoundingClientRect() {
-                return {
-                    left: 0,
-                    top: 0,
-                    width: window.innerWidth,
-                    height: window.innerHeight
-                };
-            },
-            pinType: pageContainer.style.transform ? "transform" : "fixed"
-        });
-        window.addEventListener("load", function () {
-            ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-
-            ScrollTrigger.refresh();
-        });
-        
-        //load all Images First
-        // first have an animation
         const introText = new SplitTextJS(document.querySelector('.intro h1'));
         this.loadAnimComplete = false;
         this.intro = gsap.timeline({
@@ -117,7 +118,8 @@ void new class {
                 gsap.set('.intro h1',{opacity:0, y:20})
                 if (this.loadAnimComplete = true) {
                     this.Start();
-                    // this.animatedSlider();
+                    this.animatedSlider();
+                    this.slider = new Slider();
                 }
             }
         });
@@ -136,7 +138,6 @@ void new class {
             delay: 1.3,
             ease: 'Power3.easeIn',
             stagger: 0.03,
-            
         });
         
         // const preloadImages = new Promise((resolve, reject) => {
@@ -158,7 +159,6 @@ void new class {
 
 
         // this.Sketch = new Sketch(this.ThreeDProps);
-        this.slider = new Slider();
     }
 
     setActive(elem){
@@ -172,6 +172,11 @@ void new class {
 
     Start() {
         this.animations = new Animations(this.introElements.text, this.introElements.config);
+        this.animations.customCursor(document.querySelector('.sliderBody .right'), document.querySelector('.customSliderCursor'), 100);
+        this.animations.customCursor(document.querySelector('.storiesBody'), document.querySelector('.customStoriesCursor'), 250);
+        if (document.querySelector('.customStoriesCursor').getBoundingClientRect().x > window.innerWidth/2){
+            document.querySelector('.customStoriesCursor p').innerText = 'Next';
+        }
     }
 
     animatedSlider(){
@@ -179,8 +184,7 @@ void new class {
         const landingSliderBtn = document.querySelector('.landingSliderBtn');
 
         landingSliderBtn.addEventListener('click',()=>{
-            console.log('clicked')
-            this.slider.backgroundSlider(landing, '../assets/images/landscape.jpg');
+            this.slider.ImageSlider(landingSliderBtn, document.querySelector('.landingSlideCover'));
         })
     }
 

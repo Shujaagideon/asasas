@@ -60,10 +60,60 @@
                     <p>Growing and preserving your wealth through bespoke portfolio management.</p>
                 </div>
                 <div class="middleContent">
-                    navigations
+                    <div class="navPod active">
+                        <p>Financial Planning</p>
+                        <span>&rsaquo;</span>
+                    </div>
+                    <div class="navPod">
+                        <p>Investment Management</p>
+                        <span>&rsaquo;</span>
+                    </div>
+                    <div class="navPod">
+                        <p>Succession</p>
+                        <span>&rsaquo;</span>
+                    </div>
+                    <div class="navPod">
+                        <p>Family Office</p>
+                    </div>
+                    <div class="navPod">
+                        <p>Private Banking</p>
+                    </div>
+                    <div class="navPod">
+                        <p>Personal Insurance</p>
+                        <span>&rsaquo;</span>
+                    </div>
+                    <div class="navPod">
+                        <p>General Insurance</p>
+                        <span>&rsaquo;</span>
+                    </div>
+                    <div class="navPod">
+                        <p>Real Estate Advisory</p>
+                    </div>
+                    <div class="navPod">
+                        <p>Citizenship advisory</p>
+                    </div>
                 </div>
-                <div class="middleContent">
-                    drop downs
+                <div class="middleContent2">
+                    <div class="drop active">
+                        <p>Retirement Planning 1</p>
+                        <p>Tax Planning 1</p>
+                        <p>Education Planning 1</p>
+                    </div>
+                    <div class="drop">
+                        <p>Retirement Planning 2</p>
+                        <p>Tax Planning 2</p>
+                        <p>Education Planning 2</p>
+                    </div>
+                    <div class="drop">
+                        <p>Retirement Planning 3</p>
+                        <p>Tax Planning 3</p>
+                        <p>Education Planning 3</p>
+                    </div>
+                    <div class="drop">
+                        <p>Retirement Planning 4</p>
+                        <p>Tax Planning 4</p>
+                        <p>Education Planning 4</p>
+                    </div>
                 </div>
                 <div class="imgContent">
                     
@@ -411,13 +461,13 @@
                             <p class="link ">Corporate</p>
                         </div>
                     </div>
-                    <div class="sliderBody">
+                    <div class="sliderBody swiper">
                         <div class="left">
                             <div class="sliderBtns">
-                                <div class="left-btn btn">
+                                <div class="left-btn btn swiper-button-prev">
                                     &larr;
                                 </div>
-                                <div class="right-btn btn">
+                                <div class="right-btn btn swiper-button-next">
                                     &rarr;
                                 </div>
                             </div>
@@ -432,15 +482,15 @@
                             <div class="customSliderCursor">
                                 <p>more</p>
                             </div>
-                            <div class="firstSlide carousel">
-                                <img src="../assets/images/boat.jpg" alt="">
-                                <img src="../assets/images/landscape.jpg" alt="">
-                                <img src="../assets/images/insights.jpg" alt="">
+                            <div class="firstSlide carousel swiper-wrapper">
+                                <img class="swiper-slide" src="../assets/images/boat.jpg" alt="">
+                                <img class="swiper-slide" src="../assets/images/landscape.jpg" alt="">
+                                <img class="swiper-slide" src="../assets/images/insights.jpg" alt="">
                             </div>
-                            <div class="secondSlide carousel">
-                                <img src="../assets/images/landscape.jpg" alt="">
-                                <img src="../assets/images/boat.jpg" alt="">
-                                <img src="../assets/images/insights.jpg" alt="">
+                            <div class="secondSlide carousel swiper-wrapper">
+                                <img class="swiper-slide" src="../assets/images/landscape.jpg" alt="">
+                                <img class="swiper-slide" src="../assets/images/insights.jpg" alt="">
+                                <img class="swiper-slide" src="../assets/images/boat.jpg" alt="">
                             </div>
                         </div>
                         <div class="bottom">
@@ -839,10 +889,14 @@
                         <form action="" method="post">
                             <input type="text" class="textInput" placeholder="First Name">
                             <input type="text" class="textInput" placeholder="Email Address">
-                            <input type="text" class="textInput" placeholder="Phone Number">
+                            <input type="text" id="phoneInput" class="textInput" placeholder="Phone Number">
                             <div class="formDropDowns">
-                                <input type="list" class="textInput" placeholder="select People">
-                                <input type="date" class="textInput" placeholder="date and time">
+                                <select name="people" id="selectPeople" aria-placeholder="Select People">
+                                    <option value="value1"><p>Select People</p></option>
+                                    <option value="value1">Select People</option>
+                                    <option value="value1">Select People</option><option value="value1">Select People</option>
+                                </select>
+                                <input type="datetime" class="textInput" placeholder="Date and Time">
                             </div>
                             <textarea name="message" id="formMessage" placeholder="Message"></textarea>
                             <button type="submit">Submit</button>
@@ -864,7 +918,6 @@
                         <img src="../assets/images/igIcon.png" alt="instagram icon">
                         <img src="../assets/images/twit.png" alt="twitter icon">
                         <img src="../assets/images/fb.png" alt="facebook icon">
-                        <img src="../assets/images/youtube.png" alt="youtube icon">
                     </div>
                 </div>
                 <div class="sect">

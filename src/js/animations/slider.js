@@ -1,6 +1,7 @@
 import gsap, { Power3 } from "gsap";
 import { Linear } from "gsap/all";
 import Draggable from "gsap/Draggable";
+import Swiper from "swiper";
 // import img from '../../assets/images/landscape.jpg'
 // import img2 from '../../assets/images/boat1.jpg'
 
@@ -19,6 +20,7 @@ export default class Slider {
             requestAnimationFrame(Animate)
         }
         Animate();
+        this.Swiper();
     }
     ImageSlider(button, slide) {
         // const elemTimeline = gsap.timeline({
@@ -67,5 +69,14 @@ export default class Slider {
         //     duration: 0.3,
         //     ease: 'ease',
         // })
+    }
+    Swiper(){
+        console.log('hello swiper why the fuck are you not working?????')
+        this.swiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
     }
 }

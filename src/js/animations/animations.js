@@ -178,30 +178,30 @@ export default class Animations {
         this.bgSvgs = [...document.querySelectorAll('path')];
 
         this.svgTl = new gsap.timeline({ repeat: -1, repeatDelay: 1 });
-        
-        this.bgSvgs.forEach(path=>{
+
+        this.bgSvgs.forEach(path => {
+            let duration = (Math.random()+ 0.2) * 20;
             gsap.set(path, {
-                strokeDasharray: 0,
-                strokeDashoffset: 100,
+               fill: 'none',
+               stroke: '#C79067',
+               strokeWidth: 0.5,
+               strokeDasharray: path.getTotalLength(),
             });
             gsap.to(path, {
-                strokeDashoffset: 0,
-                ease: 'Power3.easeIn',
-                duration: Math.random()*3,
+                strokeDashoffset: path.getTotalLength(),
+                ease: 'ease',
+                duration,
+                yoyo: true,
                 repeat: -1,
-                repeatDelay: 0.8,
+                repeatDelay: 0.3,
             })
-            // this.svgTl.to(path, {
-            //     ease: 'Power3.easeIn',
-            //     duration: Math.random() * 2,
-            // })
         })
     }
 
-    customCursor(elem, cursor, coefficient){
-        elem.addEventListener('mousemove', e=>{
+    customCursor(elem, cursor, coefficient) {
+        elem.addEventListener('mousemove', e => {
             console.log(e)
-            gsap.to(cursor,{
+            gsap.to(cursor, {
                 left: `${e.clientX - (window.innerWidth - elem.getBoundingClientRect().width)}px`,
                 top: `calc(${e.clientY - (window.innerHeight - elem.getBoundingClientRect().height) - elem.getBoundingClientRect().top}px + ${coefficient}px)`,
                 duration: 0.06,
@@ -210,7 +210,7 @@ export default class Animations {
             if (document.querySelector('.customStoriesCursor').getBoundingClientRect().x > window.innerWidth / 2) {
                 document.querySelector('.customStoriesCursor p').innerText = 'Next';
             }
-            else{
+            else {
                 document.querySelector('.customStoriesCursor p').innerText = 'Previous';
             }
         })

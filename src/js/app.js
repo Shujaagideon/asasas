@@ -7,6 +7,8 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { sliderData } from "./data/slider1data";
 import SplitTextJS from "split-text-js";
 import Slider from "./animations/slider";
+import 'intl-tel-input/build/css/intlTelInput.css';
+import intlTelInput from 'intl-tel-input';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -120,6 +122,7 @@ void new class {
                     this.Start();
                     this.animatedSlider();
                     this.navigation();
+                    this.form();
                     this.slider = new Slider();
                 }
             }
@@ -180,16 +183,22 @@ void new class {
             link.addEventListener('click',()=>{
                 this.setActive(link);
                 if(link.innerText === 'Corporate'){
-                    document.querySelector('.slideSection').style.background = '#07424D';
                     document.querySelector('.stories').style.background = '#f5f5f5';
-                    document.querySelector('.slideSection').style.color = '#fff';
                     document.querySelector('.stories').style.color = '#2a2a2a';
+                    document.querySelector('.slideSection').style.background = '#07424D';``
+                    document.querySelector('.slideSection').style.color = '#fff';
+                    document.querySelector('.slideSection .sliderText p').style.color = '#fff';
+                    document.querySelectorAll('.sliderBtns .btn').forEach(btn=> btn.style.color = '#fff');
+                    document.querySelectorAll('.sliderBtns .btn').forEach(btn => btn.style.borderColor = '#fff');
                 }
                 else{
-                    document.querySelector('.slideSection').style.background = '#f5f5f5';
                     document.querySelector('.stories').style.background = '#07424D';
-                    document.querySelector('.slideSection').style.color = '#2a2a2a';
                     document.querySelector('.stories').style.color = '#fff';
+                    document.querySelector('.slideSection').style.color = '#2a2a2a';
+                    document.querySelector('.slideSection').style.background = '#f5f5f5';
+                    document.querySelector('.slideSection .sliderText p').style.color = '#58595B';
+                    document.querySelectorAll('.sliderBtns .btn').forEach(btn => btn.style.color = '#2a2a2a');
+                    document.querySelectorAll('.sliderBtns .btn').forEach(btn => btn.style.borderColor = '#2a2a2a');
                 }
             })
         })
@@ -213,13 +222,20 @@ void new class {
 
         this.hamburger.addEventListener('click',()=>{
             this.expandedMenu.classList.toggle('displayedExpand');
-            this.navlistclassList.toggle('displayedNav');
-            if (this.expandedMenu.classList.contains('displayedExpand')) {
+            this.navlist.classList.toggle('displayedNav');
+            if (this.navlist.classList.contains('displayedNav')) {
                 this.header.style.background = '#07424D';
             } else {
                 this.header.style.background = 'none';
             }
         })
+    }
+    form(){
+        const input = document.querySelector("#phoneInput");
+        intlTelInput(input, {
+            // any initialisation options go here
+            
+        });
     }
 
 

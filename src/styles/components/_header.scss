@@ -35,6 +35,9 @@ header{
                         text-decoration: none;
                         color: $color-white;
                         position: relative;
+                        @include media('<desktop'){
+                            font-size: 14px;
+                        }
                     }
                     .active{
                         color: $color-gold;
@@ -95,27 +98,71 @@ header{
         background-color: $color-teal-1;
         display: flex;
         flex-basis: 5;
+        @include media('<desktop'){
+            height: 70%;
+        }
         .firstContent{
-            padding-top: 50px;
+            padding-top: 40px;
             flex: 1.1;
             border-right: 1px solid $color-white-50;
             h5{
                 font-family: 'Starling';
                 font-size: 36px;
                 line-height: 43px;
+                margin-bottom: 10px;
             }
             p{
                 width: 80%;
+                font-family: 'Graphik';
+                line-height: 22px;
+                span{
+                    justify-self: flex-end;
+                }
             }
         }
         .middleContent{
-            padding-top: 30px;
+            padding-top: 35px;
+            padding-bottom: 30px;
             flex: 1.2;
+            height: 100%;
             border-right: 1px solid $color-white-50;
+            @include flexing(flex-start, flex-start, column);
+            .active{
+                background: $color-gold-hover;
+            }
+            .navPod{
+                cursor: pointer;
+                width: 100%;
+                padding: 10px 20px;
+                @include flexing(center, space-between, row);
+                p{
+                    font-family: 'Graphik-Regular';
+                    font-size: 18px;
+                    @include media('<desktop'){
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .middleContent2{
+            padding-top: 35px;
+            padding-bottom: 30px;
+            flex: 1;
+            border-right: 1px solid $color-white-50;
+            .drop{
+                display: none;
+                p{
+                    width: 100%;
+                    padding: 10px 20px;
+                }
+            }
+            .active{
+                @include flexing(flex-start, space-around, column);
+            }
         }
         .imgContent{
             flex: 1.1;
-            background: url('../assets/images/landscape.jpg');
+            background: url('../assets/images/navBg.png');
             background-size: cover;
             background-position: center;
         }

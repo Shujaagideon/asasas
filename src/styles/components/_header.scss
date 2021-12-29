@@ -3,7 +3,7 @@ header{
     z-index: 10;
     height: 10vh;
     width: 100%;
-    // opacity: 0;
+    opacity: 0;
     @include flexing(center, center, column);
     .cover{
         height: 100%;
@@ -71,11 +71,22 @@ header{
             .hamburgerMenu{
                 cursor: pointer;
                 padding-top: 5px;
+                position: relative;
+                @include flexing(center, center, column);
                 div{
                     height: 1px;
                     width: 20px;
                     background: $color-white;
                     margin-bottom: 4px;
+                }
+                img{
+                    // background: #000;
+                    position: absolute;
+                    height: 15px;
+                    width: 15px;
+                    top: -50%;
+                    left: 0;
+                    visibility: hidden;
                 }
             }
         }
@@ -171,7 +182,4 @@ header{
 
 .displayedExpand{
     display: block;
-}
-.displayedNav{
-    display: flex;
 }

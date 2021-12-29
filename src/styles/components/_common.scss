@@ -111,6 +111,12 @@
         color: $color-black;
     }
 }
+.linkOnColoredBg{
+    color: $color-white-50;
+    &:hover{
+        color: $color-white;
+    }
+}
 .activeLink{
     color: $color-black;        
     &::before{
@@ -123,6 +129,9 @@
         background: $color-gold;
         transition: ease 0.3s;
     }
+}
+.activeLinkOnColoredBg{
+    color: $color-white;
 }
 form{
     height: 100%;

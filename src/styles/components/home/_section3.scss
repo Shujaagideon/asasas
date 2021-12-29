@@ -119,12 +119,19 @@
                         width: 50%;
                         height: 80%;
                         overflow: hidden;
-                        display: flex;
+                        position: relative;
                         img{
+                            position: absolute;
+                            display: block;
                             height: 100%;
                             width: 100%;
                             object-fit: cover;
-                            z-index: 2;
+                            opacity: 0;
+                            transition: 0.2s opacity ease-in-out;
+                            transition-delay: 0.2s;
+                        }
+                        img[data-active]{
+                            opacity: 1;
                         }
                     }
                     .secondSlide{

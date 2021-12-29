@@ -8,19 +8,22 @@ import Swiper from "swiper";
 export default class Slider {
     constructor() {
         console.log('Hey man why are you not working');
-        this.svg = document.querySelector('imgfilter');
-        const svFilter = document.getElementById('turbulence');
-        const freq = svFilter.attributes.getNamedItem('baseFrequency');
+        // this.svg = document.querySelector('imgfilter');
+        // const svFilter = document.getElementById('turbulence');
+        // const freq = svFilter.attributes.getNamedItem('baseFrequency');
         // this.buttons = document.querySelectorAll("[data-carousel-button]");
+        
+        // let num = 0;
+        // const Animate = () => {
+            //     num += 0.005;
+            //     freq.value = `${Math.abs(Math.sin(num))} ${Math.abs(Math.cos(num))}`
+            //     requestAnimationFrame(Animate)
+            // }
+            // Animate();
 
-        let num = 0;
-        const Animate = () => {
-            num += 0.005;
-            freq.value = `${Math.abs(Math.sin(num))} ${Math.abs(Math.cos(num))}`
-            requestAnimationFrame(Animate)
-        }
-        Animate();
-        this.Swiper();
+
+            this.isRunning = true;
+            this.Swiper();
     }
     ImageSlider(button, slide) {
         // const elemTimeline = gsap.timeline({
@@ -45,14 +48,16 @@ export default class Slider {
         // console.log(this.buttons);
         const offset = button.dataset.carouselButton === "next" ? 1 : -1;
 
-        const slides = slide.querySelector("[data-slides]");
-        const activeSlide = slides.querySelector("[data-active]");
-        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-        if (newIndex < 0) newIndex = slides.children.length - 1;
-        if (newIndex >= slides.children.length) newIndex = 0;
-        
-        slides.children[newIndex].dataset.active = true
-        delete activeSlide.dataset.active;
+        const slides = slide.querySelectorAll("[data-slides]");
+        slides.forEach(slide=>{
+            const activeSlide = slide.querySelector("[data-active]");
+            let newIndex = [...slide.children].indexOf(activeSlide) + offset;
+            if (newIndex < 0) newIndex = slide.children.length - 1;
+            if (newIndex >= slide.children.length) newIndex = 0;
+            
+            slide.children[newIndex].dataset.active = true
+            delete activeSlide.dataset.active;
+        })
 
         // elemTimeline.to(slides.children[newIndex], {
         //     css: {
@@ -79,4 +84,69 @@ export default class Slider {
             },
         });
     }
+    // next() {
+    //     if (this.isRunning) return;
+    //     this.isRunning = true;
+    //     let titleLen = this.titles.length;
+    //     let descLen = this.descriptions.length;
+    //     let nextTitle = this.titles[(this.current + 1) % titleLen];
+    //     let nextDesc = this.descriptions[(this.current + 1) % descLen];
+    //     this.currentTitle.innerHTML = nextTitle;
+    //     this.currentDesc.innerHTML = nextDesc;
+    //     const splittedText = new SplitTextJS(this.currentTitle).chars;
+
+    //     gsap.from(splittedText, {
+    //         duration: 0.4,
+    //         y: 20,
+    //         opacity: 0,
+    //         stagger: 0.01,
+    //         delay: 0.3,
+    //         ease: Power2.easeOut,
+    //         onComplete: () => {
+    //             this.current = (this.current + 1) % len;
+    //             this.isRunning = false;
+    //         }
+    //     });
+    //     gsap.from(this.currentDesc, {
+    //         duration: 0.6,
+    //         y: 10,
+    //         opacity: 0,
+    //         stagger: 0.01,
+    //         delay: 0.3,
+    //         ease: Power2.easeOut,
+
+    //     });
+    // }
+    // Prev() {
+    //     if (this.isRunning) return;
+    //     this.isRunning = true;
+    //     let titleLen = this.titles.length;
+    //     let descLen = this.descriptions.length;
+    //     let nextTitle = this.current === 0 ? this.titles[titleLen - 1] : this.titles[(this.current - 1) % titleLen];
+    //     let nextDesc = this.current === 0 ? this.descriptions[descLen - 1] : this.descriptions[(this.current - 1) % descLen];
+
+    //     this.currentTitle.innerHTML = nextTitle;
+    //     this.currentDesc.innerHTML = nextDesc;
+    //     const splittedText = new SplitTextJS(this.currentTitle).chars;
+    //     gsap.from(splittedText, {
+    //         duration: 0.4,
+    //         y: -20,
+    //         opacity: 0,
+    //         stagger: 0.01,
+    //         delay: 0.3,
+    //         ease: Power2.easeOut,
+    //         onComplete: () => {
+    //             this.current = this.current === 0 ? len - 1 : (this.current - 1) % len;
+    //             this.isRunning = false;
+    //         }
+    //     });
+    //     gsap.from(this.currentDesc, {
+    //         duration: 0.6,
+    //         y: -20,
+    //         opacity: 0,
+    //         stagger: 0.01,
+    //         delay: 0.3,
+    //         ease: Power2.easeOut,
+    //     });
+    // }
 }

@@ -29,16 +29,16 @@ void new class {
         const description = document.querySelector('.sliderText p');
         const pageContainer = document.querySelector('#smoothScroll');
         const sliderImageCover2 = document.querySelector('.secondSlide');
-        const rightBtn = document.querySelector('.right-btn');
-        const leftBtn = document.querySelector('.left-btn');
+        this.rightBtn = document.querySelector('.right-btn');
+        this.leftBtn = document.querySelector('.left-btn');
         
 
 
         this.sliderElements = {
             sliderImageCover,
             sliderImageCover2,
-            rightBtn,
-            leftBtn,
+            rightBtn: this.rightBtn,
+            leftBtn: this.leftBtn,
         }
 
         // const scroller = new LocomotiveScroll({
@@ -97,8 +97,8 @@ void new class {
             slider:{
                 position: [sliderImageCover, sliderImageCover2],
                 buttons:{
-                    right: rightBtn,
-                    left: leftBtn
+                    right: this.rightBtn,
+                    left: this.leftBtn
                 },
             },
             text:{
@@ -183,6 +183,9 @@ void new class {
             link.addEventListener('click',()=>{
                 this.setActive(link);
                 if(link.innerText === 'Corporate'){
+                    document.querySelector('.sliderNav .cover .activeLink').style.color = '#fff';
+                    document.querySelector('.sliderNav .cover .link').style.color = '#fff';
+                    // document.querySelector('.sliderNav .cover .link').classList.toggle('linkOnColoredBg');
                     document.querySelector('.stories').style.background = '#f5f5f5';
                     document.querySelector('.stories').style.color = '#2a2a2a';
                     document.querySelector('.slideSection').style.background = '#07424D';``
@@ -192,6 +195,8 @@ void new class {
                     document.querySelectorAll('.sliderBtns .btn').forEach(btn => btn.style.borderColor = '#fff');
                 }
                 else{
+                    document.querySelector('.sliderNav .cover .activeLink').style.color = '#2a2a2a';
+                    document.querySelector('.sliderNav .cover .link').style.color = '#58595B';
                     document.querySelector('.stories').style.background = '#07424D';
                     document.querySelector('.stories').style.color = '#fff';
                     document.querySelector('.slideSection').style.color = '#2a2a2a';
@@ -212,10 +217,18 @@ void new class {
         landingSliderBtn.addEventListener('click',()=>{
             this.slider.ImageSlider(landingSliderBtn, document.querySelector('.landingSlideCover'));
         })
+        this.rightBtn.addEventListener('click',()=>{
+            this.slider.ImageSlider(this.rightBtn, document.querySelector('.sliderBody .right'));
+        })
+        this.leftBtn.addEventListener('click', () => {
+            this.slider.ImageSlider(this.leftBtn, document.querySelector('.sliderBody .right'));
+        })
     }
 
     navigation(){
         this.hamburger = document.querySelector('.hamburgerMenu');
+        this.hamburgerDiv = document.querySelectorAll('.hamburgerMenu div');
+        this.hamburgerImg = document.querySelector('.hamburgerMenu img');
         this.expandedMenu = document.querySelector('.headerExpand');
         this.navlist = document.querySelector('.navlist');
         this.header = document.querySelector('header');
@@ -224,8 +237,14 @@ void new class {
             this.expandedMenu.classList.toggle('displayedExpand');
             this.navlist.classList.toggle('displayedNav');
             if (this.navlist.classList.contains('displayedNav')) {
+                this.hamburgerDiv.forEach(div => div.style.display = 'none');
+                this.hamburgerImg.style.visibility = 'visible';
+                this.navlist.style.display = 'flex';
                 this.header.style.background = '#07424D';
             } else {
+                this.hamburgerDiv.forEach(div => div.style.display = 'block');
+                this.hamburgerImg.style.visibility = 'hidden';
+                this.navlist.style.display = 'none';
                 this.header.style.background = 'none';
             }
         })

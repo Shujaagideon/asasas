@@ -2,7 +2,7 @@
     color: $color-white;
     text-align: right;
     flex-direction: column;
-    height: 130vh;
+    height: 138vh;
     position: relative;
     svg{
         position: absolute;
@@ -14,6 +14,9 @@
     .heading{
         z-index: 1;
         padding-top: 100px;
+        @include media('<desktop'){
+            padding-top: 80px;
+        }
         h1{
             line-height: 168px;
             @include media('<desktop'){
@@ -107,7 +110,11 @@
     .storiesBottom{
         font-family: 'Graphik';
         margin-bottom: 50px;
+        margin-top: 70px;
         text-transform: capitalize;
+        @include media('<desktop'){
+            margin-top: 40px;
+        }
     }
     @include media('>desktop'){
         h1{

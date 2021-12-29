@@ -10,18 +10,26 @@
         width: 100%;
         backdrop-filter: brightness(75%);
         @include flexing(center, space-around, column);
-        padding-top: 50px;
+        padding-top: 85px;
         @include media('<desktop'){
-            padding-top: 0px;
+            padding-top: 40px;
         }
     }
     .storiesBody{
         height: 55%;
         width: 100%;
+        padding-left: 20px;
+        @include media('<desktop'){
+            padding-left: 10px;
+        }
     }
     .insightsShowAll{
         font-size: 30px;
+        // margin-bottom: 50px;
+        transform: translateY(-70px);
+        // background: #000;
         @include media('<desktop'){
+        transform: translateY(-50px);
             font-size: 20px;
         }
     }

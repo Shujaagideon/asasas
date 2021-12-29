@@ -56,15 +56,25 @@
         color: $color-gray-light;
         .left-text{
             width: 50%;
-            padding-bottom: 50px;
+            padding-bottom: 110px;
+            @include media('<desktop'){
+                padding-bottom: 80px;
+            }
+            p{
+                font-size: 30px;
+                line-height: 28px;
+            }
         }
         .rightContent{
-            width: 30%;
+            width: 35%;
             // padding-top: 0px;
             height: 100%;
             background-color: $color-teal-1;
             // transform: translate3D(100%,0,0);
             @include flexing(flex-end, flex-end, column);
+            @include media('<desktop'){
+                width: 30%;
+            }
             .cont{
                 height: 50%;
                 @include flexing(center, center, row);
@@ -98,14 +108,23 @@
                             font-family: 'Starling';
                             font-style: normal;
                             font-weight: 350;
-                            font-size: 40px;
+                            font-size: 50px;
                             line-height: 58px;
+                            margin-bottom: 20px;
                         }
                         p{
-                            font-size: 14px;
+                            font-size: 16px;
+                            line-height: 22px;
                             color: $color-white-50;
-                            @include media('>laptop'){
-                                font-size: 16px;
+                        }
+                        @include media('<desktop'){
+                            h5{
+                                font-size: 40px;
+                                margin-bottom: 10px;
+                            }
+                            p{
+                                font-size: 14px;
+                                line-height: 18px;
                             }
                         }
                     }

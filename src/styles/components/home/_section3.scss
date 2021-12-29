@@ -1,11 +1,15 @@
 
 .slideSection{
-    height: 140vh;
+    height: 142vh;
     transition: 0.3s ease background;
     .section3Cover{
         height: 100%;
         width: 100%;
+        padding-top: 30px;
         @include flexing(center, center, column);
+        @include media('<desktop'){
+            padding-top: 10px;
+        }
         
         .heading{
             height: 8%;
@@ -20,9 +24,10 @@
 
             .sliderNav{
                 height: 10%;
-                width: 58%;
-                @include media('>=desktop'){
-                    width: 55%;
+                width: 57%;
+                padding-top: 35px;
+                @include media('<desktop'){
+                    padding-top: 10px;
                 }
                 // background: #000;
                 .cover{
@@ -42,19 +47,18 @@
                 height: 80%;
                 width: 100%;
                 display: flex;
-                overflow: hidden;
                 position: relative;
-                padding-left: 8%;
+                padding-left: 9%;
                 .left{
                     height: 100%;
-                    width: 30%;
+                    width: 32%;
                     margin-right: 30px;
                     .sliderBtns{
-                        height: 40%;
+                        height: 30%;
                         display: flex;
-                        padding-top: 30px;
+                        padding-top: 10px;
                         .btn{
-                            margin-right: 20px;
+                            margin-right: 30px;
                             height: 60px;
                             width: 60px;
                             border-radius: 50px;
@@ -66,7 +70,6 @@
                     }
                     .sliderText{
                         height: 50%;
-                        
                         p{
                             font-size: 16px;
                             margin-top: 20px;
@@ -89,7 +92,7 @@
                     height: 100%;
                     width: 80%;
                     margin-left: 50px;
-                    padding-left: 50px;
+                    padding-left: 100px;
                     position: relative;
                     overflow: hidden;
                     cursor: none;
@@ -116,8 +119,8 @@
                         margin-right: 50px;
                     }
                     .carousel{
-                        width: 50%;
-                        height: 80%;
+                        width: 60%;
+                        height: 78%;
                         overflow: hidden;
                         position: relative;
                         img{
@@ -133,27 +136,30 @@
                         img[data-active]{
                             opacity: 1;
                         }
+                        @include media('<desktop'){
+                            width: 50%;
+                        }
                     }
                     .secondSlide{
                         width: 30%;
                     }
-                    @include media('>desktop'){
-                        padding-left: 140px;
+                    @include media('<desktop'){
+                        padding-left: 50px;
                        .firstSlide{
-                            width: 60%;
+                            width: 50%;
                         }
                     }
                 }
                 .bottom{
                     position: absolute;
-                    bottom: 0;
-                    height: 8%;
-                    width: 85%;
+                    bottom: -6%;
+                    height: 10%;
+                    width: 80%;
                     .top{
                         width: 100%;
                         height: 50%;
                         @include flexing(center, space-between, row);
-                        margin-bottom: 20px;
+                        margin-bottom: 30px;
                         color: $color-gold;
                         span{
                             height: 10px;

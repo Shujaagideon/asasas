@@ -2,7 +2,7 @@
     // background: url('../assets/background.svg');
     background-size: cover;
     color: $color-black;
-    height: 160vh;
+    height: 155vh;
     position: relative;
     svg{
         position: absolute;
@@ -12,26 +12,30 @@
         z-index: -1;
     }
     .section2Cover{
-        margin-top: 100px;
+        margin-top: 180px;
         height: 100%;
         width: 100%;
         @include flexing(center, space-around, column);
+        @include media('<desktop'){
+            margin-top: 150px;
+        }
         .text{
             width: 70%;
             align-self: flex-start;
-            margin-left: 100px;
+            margin-left: 130px;
             height: 20%;
+            @include media('<desktop'){
+                margin-left: 110px;
+                h3{
+                    font-size: 60px;
+                    line-height: 68px;
+                }
+            }
             h3{
                 font-family: 'Graphik-Light';
-                font-size: 60px;
-                line-height: 68px;
-            }
-            @include media('>=desktop'){
-                width: 65%;
-                h3{
-                    font-size: 80px;
-                    line-height: 90px;
-                }
+                font-size: 80px;
+                line-height: 90px;
+                text-transform: capitalize;
             }
         }
         .circleExpand{
@@ -80,7 +84,7 @@
         .windowText{
             height: 18%;
             width: 30%;
-            padding-top: 50px;
+            padding-top: 10px;
             p{
                 color: $color-lightText;
                 font-size: 16px;

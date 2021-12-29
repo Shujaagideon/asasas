@@ -2,7 +2,10 @@
     background-color: #000;
     color: $color-white;
     @include flexing(center, space-around, column); 
-    padding-top: 50px;
+    padding-top: 85px;
+    @include media('<desktop'){
+        padding-top: 50px;
+    }
     .heading{
         width: 60%;
         text-align: center;

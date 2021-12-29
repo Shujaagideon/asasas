@@ -46,14 +46,20 @@
     }
 }
 .logo{
-    font-size: 20px;
+    font-size: 22px;
     display: flex;
     align-items: center;
     font-family: 'LT_5500';
     text-transform: uppercase;
     margin-right: 20px;
     img{
-        margin-right: 5px;
+        margin-right: 12px;
+    }
+    @include media('<desktop'){
+        font-size: 20px;
+        img{
+            margin-right: 6px;
+        }
     }
 }
 .text{
@@ -226,16 +232,22 @@ form{
         }
     }
     button{
-        height: 40px;
-        width: 100px;
+        height: 56px;
+        width: 176px;
         @include flexing(center, center, row);
         border: none;
         background-color: $color-gold;
         color: $color-white;
         transition: $transitionEffect;
+        margin-top: 50px;
         cursor: pointer;
         &:hover{
             background-color: $color-gold-hover;
+        }
+        @include media('<desktop'){
+            height: 45px;
+            width: 120px;
+            margin-top: 10px;
         }
     }
 }
@@ -253,14 +265,19 @@ form{
         .sect{
             height: 80%;
             width: 20%;
+            margin-top: 20px;
             .logo{
                 height: 20%;
                 margin-bottom: 20px;
-                margin-left: 10px;
+                margin-left: 25px;
+                @include media('<desktop'){
+                    margin-left: 10px;
+                }
             }
             .icons{
                 @include flexing(flex-start, space-around, row);
-                width: 60%;
+                width: 50%;
+                margin-left: 15px;
                 img{
                     height: 18px;
                     width: 18px;

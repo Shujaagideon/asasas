@@ -11,9 +11,13 @@ header{
         @include flexing(center, space-between, row);
         color: $color-white;
         padding-left: 60px;
-        padding-right: 30px;
+        padding-top: 10px;
+        padding-right: 50px;
+        @include media('<desktop'){
+            padding-right: 30px;
+        }
         
-        .navlist{
+        .navlist{   
             height: 100%;
             width: 60%;
             // padding-left: 30px;
@@ -60,9 +64,12 @@ header{
             }
         }
         nav{
-            width: 25%;
+            width: 27%;
             font-size: 14px;
             @include flexing(center, space-around, row);
+            @include media('<desktop'){
+                width: 25%;
+            }
             img{
                 height: 13px;
                 width: 12px;

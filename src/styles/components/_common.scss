@@ -264,20 +264,24 @@ form{
         width: 100%;
         .sect{
             height: 80%;
-            width: 20%;
+            width: 24%;
             margin-top: 20px;
+            margin-left: 10px;
+            @include media('<desktop'){
+                    width: 20%;
+                }
             .logo{
                 height: 20%;
+                margin-left: 50px;
                 margin-bottom: 20px;
-                margin-left: 25px;
                 @include media('<desktop'){
-                    margin-left: 10px;
+                    margin-left: 20px;
                 }
             }
             .icons{
                 @include flexing(flex-start, space-around, row);
-                width: 50%;
-                margin-left: 15px;
+                width: 35%;
+                margin-left: 50px;
                 img{
                     height: 18px;
                     width: 18px;
@@ -285,17 +289,19 @@ form{
                     overflow: hidden;
                 }
                 @include media('<desktop'){
-                    width: 50%;
+                    width: 40%;
+                    margin-left: 20px;
                     img{
-                        height: 16px;
-                        width: 16px;
+                        height: 15px;
+                        width: 15px;
                     }    
                 }
             }
             .sectText{
-                height: 50%;
+                height: 55%;
                 @include flexing(flex-start, space-around, column);
-                p{
+                p{  
+                    font-family: 'Graphik-Extralight';
                     color: $color-white;
                     font-size: 16px;
                 }
@@ -308,8 +314,10 @@ form{
             h6{
                 font-size: 24px;
                 font-family: 'Graphik-Regular';
+                margin-top: 10px;
                 text-transform: capitalize;
                 @include media('<desktop'){
+                    margin-top: 5px;
                     font-size: 18px;
                 }
             }

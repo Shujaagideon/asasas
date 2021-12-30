@@ -1,0 +1,20 @@
+.imagesSection2{
+    height: 70vh;
+    @include flexing(center, center, row);
+    .cover{
+        width: 100%;
+        height: 85%;
+        @include flexing(center, space-between, row);
+        img{
+            &:nth-child(even){
+                height: 75%;
+            }
+            &:nth-child(odd){
+                height: 100%;
+            }
+            &:nth-child(4){
+                margin-top: 50px;
+            }
+        }
+    }
+}

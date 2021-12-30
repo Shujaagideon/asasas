@@ -1,0 +1,85 @@
+.team{
+    height: 113vh;
+    overflow: hidden;
+    .head{
+        height: 23%;
+        width: 100%;
+        @include flexing(center, center, row);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+        .person{
+            width: 25%;
+            border-right: 1px solid rgba(0, 0, 0, 0.01);
+            @include flexing(center, center, row);
+            padding-top: 40px;
+            height: 100%;
+            .imgCover{
+                height: 146px;
+                width: 146px;
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .active{
+            background-color: $color-gold;
+        }
+    }
+    .body{
+        height: 77%;
+        width: 100%;
+        .title{
+            height: 27%;
+            width: 100%;
+            @include flexing(center, center, row);
+        }
+        .content{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            padding-left: 130px;
+            .left{
+                height: 67%;
+                width: 50%;
+                margin-top: 40px;
+                @include flexing('', space-between, column);
+                .top{
+                    width: 75%;
+                    h6{
+                        font-size: 30px;
+                        line-height: 48px;
+                        margin-top: 10px;
+                        margin-bottom: 30px;
+                    }
+                }
+                .bottom{
+                    margin-bottom: 20px;
+                    font-size: 30px;
+                    font-family: 'Graphik';
+                    color: $color-gold;
+                }
+            }
+            .right{
+                height: 80%;
+                width: 50%;
+                position: relative;
+                @include flexing('', center, row);
+                .grayBg{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 40%;
+                    left: 0;
+                    background: $color-gray-light;
+                }
+                img{
+                    height: 520px;
+                    margin-right: 80px;
+                    z-index: 4;
+                }
+            }
+        }
+    }
+}

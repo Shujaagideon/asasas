@@ -1,0 +1,104 @@
+.history{
+    height: 145vh;
+    .heading{
+        height: 25%;
+        padding-top: 10%;
+        width: 100%;
+        @include flexing(center, center, column);
+        color: $color-white;
+        h5{
+            font-family: 'Graphik-Light';
+        }
+    }
+    .historyBody{
+        height: 75%;
+        width: 100%;
+        .cover{
+            height: 100%;
+            width: 100%;
+            @include flexing(center, center, row);
+            position: relative;
+            overflow: hidden;
+            .btns{
+                position: absolute;
+                height: 100%;
+                width: 122%;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                @include flexing(center, space-between, row);
+                .btn{
+                    height: 275px;
+                    width: 275px;
+                    border-radius: 50%;
+                    border: 1px solid $color-white-50;
+                    @include flexing(center, '', row);
+                    color: $color-white;
+                    .left{
+                        justify-self: flex-end;
+                        padding-left: 72%;
+                    }
+                    .right{
+                        justify-self: flex-start;
+                        padding-left: 21%;
+                    }
+                    img{
+                        height: 18px;
+                        width: 28px;
+                    }
+                }
+            }
+            .main{
+                height: 825px;
+                width: 825px;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 255, 255, 0.24);
+                background-color: rgba(255, 255, 255, 0.04);
+                margin-bottom: 50px;
+                position: relative;
+                @include flexing(center, center, row);
+                .markers{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    img{
+                        position: absolute;
+                        height: 100%;
+                    }
+                }
+                .content{
+                    height: 730px;
+                    width: 730px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    position: relative;
+                    @include flexing(center, center, row);
+                    img{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        filter: brightness(70%);
+                    }
+                    .text{
+                        height: 100%;
+                        width: 100%;
+                        text-align: center;
+                        color: $color-white;
+                        z-index: 4;
+                        padding-top: 60px;
+                        @include flexing(center, center, column);
+                        h2{
+                            font-size: 120px;
+                            line-height: 98px;
+                            margin-bottom: 20px;
+                            font-family: 'Graphik-Medium';
+                        }
+                        p{
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

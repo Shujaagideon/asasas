@@ -1084,6 +1084,14 @@ form button:hover {
   }
 }
 
+.footer .sectCover .sect .mid {
+  margin-top: -10px;
+}
+
+.footer .sectCover .sect .last {
+  margin-top: 20px;
+}
+
 .footer .sectCover .sect h6 {
   font-size: 24px;
   font-family: 'Graphik-Regular';

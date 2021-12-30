@@ -1,0 +1,18 @@
+.bgImg{
+    height: 87vh;
+    width: 100%;
+    margin-top: 100px;
+    background-image: url('../assets/images/aboutBg.jpg');
+    background-size: cover;
+    @include flexing(center, center, row);
+    overflow: hidden;
+    .cover{
+        width: 120%;
+        height: fit-content;
+        white-space: nowrap;
+        color: $color-white;
+        font-size: 160px;
+        padding-top: 30px;
+        font-family: 'Starling';
+    }
+}

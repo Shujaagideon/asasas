@@ -1,0 +1,20 @@
+.shorts{
+    height: 40vh;
+    @include flexing(center, center, row);
+    margin-top: 70px;
+    padding-left: 100px;
+    .short{
+        height: 80%;
+        width: 25%;
+        margin-right: 85px;
+        @include flexing(flex-start, space-around, column);
+        img{
+            height: 50px;
+        }
+        h5{
+            font-size: 40px;
+            line-height: 48px;
+            font-family: 'Graphik';
+        }
+    }
+}

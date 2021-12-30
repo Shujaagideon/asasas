@@ -3,8 +3,9 @@ header{
     z-index: 10;
     height: 10vh;
     width: 100%;
-    opacity: 0;
+    // opacity: 0;
     @include flexing(center, center, column);
+    
     .cover{
         height: 100%;
         width: 100%;
@@ -95,10 +96,20 @@ header{
                     left: 0;
                     visibility: hidden;
                 }
+                &[data-colored]{
+                    div{
+                        background: $color-black;
+                    }
+                }
             }
         }
     }
 }
+header[data-colored]{
+    .cover{
+        color: $color-black;
+    }
+    }
 .headerExpand{
     position: fixed;
     display: none;
@@ -121,7 +132,7 @@ header{
         }
         .firstContent{
             padding-top: 40px;
-            flex: 1.1;
+            flex: 1.2;
             border-right: 1px solid $color-white-50;
             h5{
                 font-family: 'Starling';
@@ -140,11 +151,11 @@ header{
         }
         .middleContent{
             padding-top: 35px;
-            padding-bottom: 30px;
-            flex: 1.2;
+            padding-bottom: 70px;
+            flex: 1.1;
             height: 100%;
             border-right: 1px solid $color-white-50;
-            @include flexing(flex-start, flex-start, column);
+            @include flexing(flex-start, space-around, column);
             .active{
                 background: $color-gold-hover;
             }
@@ -179,7 +190,7 @@ header{
             }
         }
         .imgContent{
-            flex: 1.1;
+            flex: 1.2;
             background: url('../assets/images/navBg.png');
             background-size: cover;
             background-position: center;

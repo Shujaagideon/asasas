@@ -13,7 +13,7 @@
     }
     .heading{
         z-index: 1;
-        padding-top: 100px;
+        padding-top: 120px;
         @include media('<desktop'){
             padding-top: 80px;
         }
@@ -62,7 +62,7 @@
         }
         .imgCover{
             height: 85%;
-            width: 25%;
+            width: 28%;
             top: 8%;
             position: absolute;
             img{
@@ -109,8 +109,8 @@
     }
     .storiesBottom{
         font-family: 'Graphik';
-        margin-bottom: 50px;
-        margin-top: 70px;
+        margin-bottom: 90px;
+        margin-top: 30px;
         text-transform: capitalize;
         @include media('<desktop'){
             margin-top: 40px;

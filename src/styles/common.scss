@@ -1,0 +1,345 @@
+@import './base/all';
+@import './components/header';
+.container{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    @include flexing(center, center, row);
+    
+    .wrapper{
+        height: 100%;
+        width: 100%;
+        padding-left: 20px;
+    }
+}
+.coloredBg{
+    background-color: $color-teal-1;
+    .sliderText{
+        p{
+            color: $color-white;
+        }
+    }
+    .sliderBtn{
+        .btn{
+            border-color: $color-white;
+            color: $color-white
+        }
+    }
+}
+.grayBg{
+    background-color: $color-gray-light;
+}
+.button{
+    @include flexing(center, center, row);
+    background-color: $color-white;
+    color: $color-teal-1;
+    font-family: 'Graphik-Regular';
+    font-size: 16px;
+    border-radius: 50px;
+    padding: 8px 18px;
+    cursor: pointer;
+    // &:hover{
+        
+    // }
+    @include media('<desktop'){
+        // padding: 6px 15px;
+        font-size: 14px;
+    }
+}
+.button[data-colored]{
+    background-color: $color-teal-1;
+    color: $color-white
+}
+.logo{
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    font-family: 'LT_5500';
+    text-transform: uppercase;
+    margin-right: 20px;
+    img{
+        margin-right: 12px;
+    }
+    @include media('<desktop'){
+        font-size: 20px;
+        img{
+            margin-right: 6px;
+        }
+    }
+}
+.text{
+    height: fit-content;
+    overflow: hidden;
+    cursor: default;
+}
+#outsideSvg{
+    display: none;
+}
+.cardSliderContent{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .cardSliderCover{
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        padding-left: 100px;
+        max-height: 530px;
+        .cardSlider{
+            height: 100%;
+            min-width: 300px;
+            margin-right: 30px;
+            border: 1px solid $color-white-50;
+            padding: 45px;
+            max-width: 380px;
+            @include flexing(flex-start, space-between, column);
+            @include media('>laptop'){
+                width: 400px;
+                height: 90%;
+            }
+            .slideTop{
+                h4{
+                    font-family: 'Starling';
+                }
+            }
+            .slideBottom{
+                width: 80%;
+            }
+        }
+        .active{
+            background: $color-gold;
+            border: none;
+        }
+    }
+}
+
+.link{
+    color: $color-black-light;
+    cursor: pointer;
+    transition: ease 0.5s;
+    position: relative;
+    &:hover{
+        color: $color-black;
+    }
+}
+.linkOnColoredBg{
+    color: $color-white-50;
+    &:hover{
+        color: $color-white;
+    }
+}
+.activeLink{
+    color: $color-black;        
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: $color-gold;
+        transition: ease 0.3s;
+    }
+}
+.activeLinkOnColoredBg{
+    color: $color-white;
+}
+form{
+    height: 100%;
+    width: 100%;
+    max-height: 600px;
+    font-size: 16px !important;
+    @include flexing(flex-start, space-around, column);
+    .formDropDowns{
+        width: 100%;
+        @include flexing(center, space-between, row);
+        input{
+            width: 48%;
+            background: transparent;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: 50%;
+        }
+        select{
+            width: 48%;
+            height: 60px;
+            border: 1px solid $color-black-light;
+            padding: 5px 10px;
+            outline: none;
+            color: $color-gray;
+             -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: 50%;
+            &:focus{
+                outline: none;
+                border: 1px solid $color-black-light;
+            }
+            @include media('<desktop'){
+                height: 40px;
+            }
+            &::-ms-expand {
+               display: none;
+            }
+            option{
+                height: 100%;
+                width: 100%;
+                background-color: $color-white;
+                color: $color-gray;
+                p{
+                    height: 100%;
+                    width: 100%;
+                    background: $color-white;
+                    &:hover{
+                        background: $color-gold;
+                    }
+                }
+            }
+        }
+    }
+    .iti{
+        width: 100%;
+        .iti__country-list{
+            width: 300px;
+            overflow-x: hidden;
+            border: 1px solid #fafafa;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05);
+        }
+    }
+    input{
+        height: 60px;
+        width: 100%;
+        border: 1px solid $color-black-light;
+        padding: 5px;
+        padding-left: 10px;
+        &:focus{
+            outline: none;
+            border: 1px solid $color-black-light;
+        }
+        @include media('<desktop'){
+            height: 40px;
+        }
+    }
+    
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid $color-black-light;
+        resize: none;
+        &:focus{
+            outline: none;
+            border: 1px solid $color-black-light;
+        }
+    }
+    button{
+        height: 56px;
+        width: 176px;
+        @include flexing(center, center, row);
+        border: none;
+        background-color: $color-gold;
+        color: $color-white;
+        transition: $transitionEffect;
+        margin-top: 50px;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-gold-hover;
+        }
+        @include media('<desktop'){
+            height: 45px;
+            width: 120px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.footer{
+    height: 44vh;
+    width: 100%;
+    color: $color-white;
+    background-color: #000;
+    @include flexing(center, space-around, column);
+    .sectCover{
+        @include flexing(center, space-around, row);
+        height: 80%;
+        width: 100%;
+        .sect{
+            height: 80%;
+            width: 24%;
+            margin-top: 20px;
+            margin-left: 10px;
+            @include media('<desktop'){
+                    width: 20%;
+                }
+            .logo{
+                height: 20%;
+                margin-left: 50px;
+                margin-bottom: 20px;
+                @include media('<desktop'){
+                    margin-left: 20px;
+                }
+            }
+            .icons{
+                @include flexing(flex-start, space-around, row);
+                width: 35%;
+                margin-left: 50px;
+                img{
+                    height: 18px;
+                    width: 18px;
+                    object-fit: contain;
+                    overflow: hidden;
+                }
+                @include media('<desktop'){
+                    width: 40%;
+                    margin-left: 20px;
+                    img{
+                        height: 15px;
+                        width: 15px;
+                    }    
+                }
+            }
+            .sectText{
+                height: 55%;
+                @include flexing(flex-start, space-around, column);
+                p{  
+                    font-family: 'Graphik-Extralight';
+                    color: $color-white;
+                    font-size: 16px;
+                }
+                @include media('<desktop'){
+                    p{
+                        font-size: 14px;
+                    }    
+                }
+            }
+            h6{
+                font-size: 24px;
+                font-family: 'Graphik-Regular';
+                margin-top: 10px;
+                text-transform: capitalize;
+                @include media('<desktop'){
+                    margin-top: 5px;
+                    font-size: 18px;
+                }
+            }
+            &:nth-child(3){
+                border-right: 1px solid $color-white-50;
+            }
+        }
+    }
+    .footerBottom{
+        width: 100%;
+        padding: 20px 100px;
+        height: 25%;
+        border-top: 1px solid $color-white-50;
+        color: $color-white;
+        @include flexing(center, space-between, row);
+        p{
+            font-size: 13px;
+        }
+    }
+}

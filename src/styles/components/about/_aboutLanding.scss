@@ -1,0 +1,46 @@
+.aboutBanner{
+    height: 80vh;
+    padding: 80px;
+    
+    .cover{
+        height: 100%;
+        width: 100%;
+        // background: #177;
+        padding-top: 130px;
+        position: relative;
+        .top{
+            height: 50%;
+            width: 100%;
+            z-index: 1;
+            @include flexing(center, space-around, column);
+            p{
+                font-size: 14px;
+            }
+        }
+        .bottom{
+            height: 50%;
+            width: 100%;
+            z-index: 1;
+            @include flexing(flex-end, space-between, row);
+            h5{
+                padding-left: 55px;
+                padding-top: 55px;
+                width: 50%;
+                align-self: center;
+                font-size: 40px;
+                font-family: 'Graphik';
+            }
+            p{
+                font-size: 20px;
+                line-height: 30px;
+                width: 50%;
+            }
+        }
+        img{
+            position: absolute;
+            height: 80%;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+}

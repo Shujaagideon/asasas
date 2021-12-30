@@ -17,13 +17,14 @@
         }
     }
     .awardsBody{
-        height: 50%;
+        height: 45%;
         @include flexing(center, space-around, row);
         flex-wrap: wrap;
-        width: 70%;
+        padding-bottom: 80px;
+        width: 80%;
         .cover{
         @include flexing(center, center, row);
-            height: 30%;
+            height: 25%;
             width: 30%;
             img{
                 height: 50%;

@@ -7,14 +7,20 @@
         height: 80%;
         width: 25%;
         margin-right: 85px;
-        @include flexing(flex-start, space-around, column);
+        padding-top: 26px;
+        @include flexing(flex-start, space-between, column);
         img{
             height: 50px;
+        }
+        .text{
+            height: 68%;
+            width: 100%;
         }
         h5{
             font-size: 40px;
             line-height: 48px;
             font-family: 'Graphik';
+            margin-bottom: 25px;
         }
     }
 }

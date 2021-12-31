@@ -16,14 +16,19 @@
             p{
                 font-size: 14px;
             }
+            h1{
+                margin-top: 25px;
+            }
         }
         .bottom{
             height: 50%;
             width: 100%;
             z-index: 1;
             @include flexing(flex-end, space-between, row);
+            transform: translateY(12%);
             h5{
                 padding-left: 55px;
+                padding-top: 15px;
                 width: 50%;
                 align-self: center;
                 font-size: 40px;
@@ -32,7 +37,7 @@
             p{
                 font-size: 20px;
                 line-height: 30px;
-                width: 50%;
+                width: 53%;
             }
         }
         img{

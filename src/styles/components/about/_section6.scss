@@ -39,7 +39,7 @@
             height: 80%;
             width: 100%;
             display: flex;
-            padding-left: 130px;
+            padding-left: 135px;
             .left{
                 height: 67%;
                 width: 50%;
@@ -50,8 +50,11 @@
                     h6{
                         font-size: 30px;
                         line-height: 48px;
-                        margin-top: 10px;
+                        margin-top: 8px;
                         margin-bottom: 30px;
+                    }
+                    h5{
+                        font-family: 'Graphik';
                     }
                 }
                 .bottom{

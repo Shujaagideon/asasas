@@ -26,43 +26,36 @@
 @font-face {
   font-family: 'Graphik-Bold';
   src: url("../assets/Fonts/Graphik-Bold.otf");
-  font-weight: bold;
 }
 
 @font-face {
   font-family: 'Graphik';
   src: url("../assets/Fonts/Graphik-Extralight.otf");
-  font-weight: lighter;
 }
 
 @font-face {
   font-family: 'Graphik-light';
   src: url("../assets/Fonts/Graphik-Light.otf");
-  font-weight: 200;
 }
 
 @font-face {
   font-family: 'Graphik-Medium';
   src: url("../assets/Fonts/Graphik-Medium.otf");
-  font-weight: 400;
 }
 
 @font-face {
   font-family: 'Graphik-semiBold';
   src: url("../assets/Fonts/Graphik-Semibold.otf");
-  font-weight: 600;
 }
 
 @font-face {
   font-family: 'Graphik-Super';
   src: url("../assets/Fonts/Graphik-Super.otf");
-  font-weight: 700;
 }
 
 @font-face {
   font-family: 'Graphik-Thin';
   src: url("../assets/Fonts/Graphik-Thin.otf");
-  font-weight: 300;
 }
 
 @font-face {
@@ -179,6 +172,15 @@ p {
   p {
     font-size: 14px;
     line-height: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 100px;
+  }
+  h3 {
+    font-size: 70px;
   }
 }
 
@@ -716,6 +718,8 @@ header[data-colored] .cover {
   border: 1px solid #ffffff80;
   padding: 45px;
   max-width: 380px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -733,17 +737,22 @@ header[data-colored] .cover {
 
 @media (min-width: 1365px) {
   .cardSliderContent .cardSliderCover .cardSlider {
-    width: 400px;
-    height: 90%;
+    height: 460px;
+    width: 380px;
   }
 }
 
-.cardSliderContent .cardSliderCover .cardSlider .slideTop h4 {
+.cardSliderContent .cardSliderCover .cardSlider .SlideTop h4 {
   font-family: 'Starling';
 }
 
 .cardSliderContent .cardSliderCover .cardSlider .slideBottom {
   width: 80%;
+}
+
+.cardSliderContent .cardSliderCover .cardSlider:hover {
+  background: #C78F66;
+  border: none;
 }
 
 .cardSliderContent .cardSliderCover .active {
@@ -1006,6 +1015,7 @@ form button:hover {
   width: 24%;
   margin-top: 20px;
   margin-left: 10px;
+  padding-left: 10px;
 }
 
 @media (max-width: 1439px) {
@@ -1017,7 +1027,7 @@ form button:hover {
 .footer .sectCover .sect .logo {
   height: 20%;
   margin-left: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 @media (max-width: 1439px) {
@@ -1040,7 +1050,7 @@ form button:hover {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 35%;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
 .footer .sectCover .sect .icons img {
@@ -1079,8 +1089,8 @@ form button:hover {
 }
 
 .footer .sectCover .sect .sectText p {
-  font-family: 'Graphik-Extralight';
-  color: #ffffff;
+  font-family: 'Graphik-Thin';
+  color: #fff;
   font-size: 16px;
 }
 

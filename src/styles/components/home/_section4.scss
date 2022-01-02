@@ -13,9 +13,11 @@
     }
     .heading{
         z-index: 1;
-        padding-top: 120px;
+        padding-top: 110px;
+        padding-right: 40px;
         @include media('<desktop'){
             padding-top: 80px;
+            padding-right: 10px;
         }
         h1{
             line-height: 168px;
@@ -42,6 +44,7 @@
         z-index: 1;
         position: relative;
         cursor: none;
+        margin-bottom: 20px;
         .customStoriesCursor{
             position: absolute;
             height: 120px;
@@ -61,7 +64,7 @@
             }
         }
         .imgCover{
-            height: 85%;
+            height: 82%;
             width: 28%;
             top: 8%;
             position: absolute;
@@ -74,11 +77,11 @@
             }
         }
         .img1{
-            left: 25%;
-            height: 75%;
+            left: 16%;
+            height: 72%;
             top: 50%;
             transform: translate(0,-50%) rotateZ(3deg);
-            width: 20%;
+            width: 25%;
         }
         .img2{
             left: 50%;
@@ -87,8 +90,8 @@
         }
         .img3{
             left: 60%;
-            height: 75%;
-            width: 20%;
+            height: 73%;
+            width: 25%;
             top: 50%;
             transform: translate(0,-50%) rotateZ(-3deg);
         }
@@ -96,11 +99,12 @@
             height: 60%;
             font-size: 30px;
             line-height: 38px;
+            margin-bottom: 0;
             .imgCover{
-                width: 35%;
+                width: 36%;
             }
             .img1{
-                left: 15%;
+                left: 16%;
             }
             .img3{
                 left: 50%;
@@ -109,11 +113,11 @@
     }
     .storiesBottom{
         font-family: 'Graphik';
-        margin-bottom: 90px;
-        margin-top: 30px;
+        margin-bottom: 80px;
+        margin-top: 10px;
         text-transform: capitalize;
         @include media('<desktop'){
-            margin-top: 40px;
+            margin-bottom: 40px;
         }
     }
     @include media('>desktop'){

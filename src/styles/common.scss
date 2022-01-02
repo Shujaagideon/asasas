@@ -92,18 +92,23 @@
             border: 1px solid $color-white-50;
             padding: 45px;
             max-width: 380px;
+            transition: 0.2s ease;
             @include flexing(flex-start, space-between, column);
             @include media('>laptop'){
-                width: 400px;
-                height: 90%;
+                height: 460px;
+                width: 380px;
             }
-            .slideTop{
+            .SlideTop{
                 h4{
                     font-family: 'Starling';
                 }
             }
             .slideBottom{
                 width: 80%;
+            }
+            &:hover{
+                background: $color-gold;
+                border: none;
             }
         }
         .active{
@@ -272,13 +277,14 @@ form{
             width: 24%;
             margin-top: 20px;
             margin-left: 10px;
+            padding-left: 10px;
             @include media('<desktop'){
                     width: 20%;
                 }
             .logo{
                 height: 20%;
                 margin-left: 50px;
-                margin-bottom: 20px;
+                margin-bottom: 25px;
                 @include media('<desktop'){
                     margin-left: 20px;
                 }
@@ -286,7 +292,7 @@ form{
             .icons{
                 @include flexing(flex-start, space-around, row);
                 width: 35%;
-                margin-left: 50px;
+                margin-left: 40px;
                 img{
                     height: 18px;
                     width: 18px;
@@ -306,14 +312,14 @@ form{
                 height: 55%;
                 @include flexing(flex-start, space-around, column);
                 p{  
-                    font-family: 'Graphik-Extralight';
-                    color: $color-white;
+                    font-family: 'Graphik-Thin';
+                    color: #fff;
                     font-size: 16px;
                 }
                 @include media('<desktop'){
                     p{
                         font-size: 14px;
-                    }    
+                    }
                 }
             }
             .mid{

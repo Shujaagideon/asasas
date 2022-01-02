@@ -62,10 +62,15 @@
                             height: 60px;
                             width: 60px;
                             border-radius: 50px;
-                            border: 1px solid $color-gray;
+                            border: 1px solid #00000030;
                             @include flexing(center, center, row);
                             color: $color-gray;
                             cursor: pointer;
+                            transition: 0.4s ease;
+                            &:hover{
+                                border: 1px solid $color-black;
+                                color: $color-black;
+                            }
                         }
                     }
                     .sliderText{
@@ -119,7 +124,7 @@
                         margin-right: 50px;
                     }
                     .carousel{
-                        width: 60%;
+                        width: 61%;
                         height: 78%;
                         overflow: hidden;
                         position: relative;
@@ -141,7 +146,8 @@
                         }
                     }
                     .secondSlide{
-                        width: 30%;
+                        width: 29%;
+                        transform: translateY(-15px);
                     }
                     @include media('<desktop'){
                         padding-left: 50px;

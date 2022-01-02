@@ -26,43 +26,36 @@
 @font-face {
   font-family: 'Graphik-Bold';
   src: url("../assets/Fonts/Graphik-Bold.otf");
-  font-weight: bold;
 }
 
 @font-face {
   font-family: 'Graphik';
   src: url("../assets/Fonts/Graphik-Extralight.otf");
-  font-weight: lighter;
 }
 
 @font-face {
   font-family: 'Graphik-light';
   src: url("../assets/Fonts/Graphik-Light.otf");
-  font-weight: 200;
 }
 
 @font-face {
   font-family: 'Graphik-Medium';
   src: url("../assets/Fonts/Graphik-Medium.otf");
-  font-weight: 400;
 }
 
 @font-face {
   font-family: 'Graphik-semiBold';
   src: url("../assets/Fonts/Graphik-Semibold.otf");
-  font-weight: 600;
 }
 
 @font-face {
   font-family: 'Graphik-Super';
   src: url("../assets/Fonts/Graphik-Super.otf");
-  font-weight: 700;
 }
 
 @font-face {
   font-family: 'Graphik-Thin';
   src: url("../assets/Fonts/Graphik-Thin.otf");
-  font-weight: 300;
 }
 
 @font-face {
@@ -179,6 +172,15 @@ p {
   p {
     font-size: 14px;
     line-height: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 100px;
+  }
+  h3 {
+    font-size: 70px;
   }
 }
 
@@ -442,6 +444,10 @@ canvas {
   margin-bottom: 20px;
 }
 
+.darkBackground .cover .rightContent .cont .cover .text .toph5 {
+  padding-top: 20px;
+}
+
 .darkBackground .cover .rightContent .cont .cover .text p {
   font-size: 16px;
   line-height: 22px;
@@ -536,21 +542,24 @@ canvas {
   height: 20%;
 }
 
+.window .section2Cover .text h3 {
+  font-family: 'Graphik-Light';
+  font-size: 80px;
+  line-height: 90px;
+  text-transform: capitalize;
+}
+
 @media (max-width: 1439px) {
-  .window .section2Cover .text {
-    margin-left: 110px;
-  }
   .window .section2Cover .text h3 {
     font-size: 60px;
     line-height: 68px;
   }
 }
 
-.window .section2Cover .text h3 {
-  font-family: 'Graphik-Light';
-  font-size: 80px;
-  line-height: 90px;
-  text-transform: capitalize;
+@media (max-width: 1439px) {
+  .window .section2Cover .text {
+    margin-left: 110px;
+  }
 }
 
 .window .section2Cover .circleExpand {
@@ -783,7 +792,7 @@ canvas {
   height: 60px;
   width: 60px;
   border-radius: 50px;
-  border: 1px solid #5D5D5D;
+  border: 1px solid #00000030;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -799,6 +808,13 @@ canvas {
           flex-direction: row;
   color: #5D5D5D;
   cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.slideSection .section3Cover .slider .sliderBody .left .sliderBtns .btn:hover {
+  border: 1px solid #2a2a2a;
+  color: #2a2a2a;
 }
 
 .slideSection .section3Cover .slider .sliderBody .left .sliderText {
@@ -883,7 +899,7 @@ canvas {
 }
 
 .slideSection .section3Cover .slider .sliderBody .right .carousel {
-  width: 60%;
+  width: 61%;
   height: 78%;
   overflow: hidden;
   position: relative;
@@ -914,7 +930,9 @@ canvas {
 }
 
 .slideSection .section3Cover .slider .sliderBody .right .secondSlide {
-  width: 30%;
+  width: 29%;
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 @media (max-width: 1439px) {
@@ -1018,12 +1036,14 @@ canvas {
 
 .stories .heading {
   z-index: 1;
-  padding-top: 120px;
+  padding-top: 110px;
+  padding-right: 40px;
 }
 
 @media (max-width: 1439px) {
   .stories .heading {
     padding-top: 80px;
+    padding-right: 10px;
   }
 }
 
@@ -1059,6 +1079,7 @@ canvas {
   z-index: 1;
   position: relative;
   cursor: none;
+  margin-bottom: 20px;
 }
 
 .stories .storiesBody .customStoriesCursor {
@@ -1095,7 +1116,7 @@ canvas {
 }
 
 .stories .storiesBody .imgCover {
-  height: 85%;
+  height: 82%;
   width: 28%;
   top: 8%;
   position: absolute;
@@ -1111,12 +1132,12 @@ canvas {
 }
 
 .stories .storiesBody .img1 {
-  left: 25%;
-  height: 75%;
+  left: 16%;
+  height: 72%;
   top: 50%;
   -webkit-transform: translate(0, -50%) rotateZ(3deg);
           transform: translate(0, -50%) rotateZ(3deg);
-  width: 20%;
+  width: 25%;
 }
 
 .stories .storiesBody .img2 {
@@ -1128,8 +1149,8 @@ canvas {
 
 .stories .storiesBody .img3 {
   left: 60%;
-  height: 75%;
-  width: 20%;
+  height: 73%;
+  width: 25%;
   top: 50%;
   -webkit-transform: translate(0, -50%) rotateZ(-3deg);
           transform: translate(0, -50%) rotateZ(-3deg);
@@ -1140,12 +1161,13 @@ canvas {
     height: 60%;
     font-size: 30px;
     line-height: 38px;
+    margin-bottom: 0;
   }
   .stories .storiesBody .imgCover {
-    width: 35%;
+    width: 36%;
   }
   .stories .storiesBody .img1 {
-    left: 15%;
+    left: 16%;
   }
   .stories .storiesBody .img3 {
     left: 50%;
@@ -1154,14 +1176,14 @@ canvas {
 
 .stories .storiesBottom {
   font-family: 'Graphik';
-  margin-bottom: 90px;
-  margin-top: 30px;
+  margin-bottom: 80px;
+  margin-top: 10px;
   text-transform: capitalize;
 }
 
 @media (max-width: 1439px) {
   .stories .storiesBottom {
-    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1526,6 +1548,7 @@ canvas {
   font-size: 20px;
   line-height: 30px;
   width: 53%;
+  color: #797A7C;
 }
 
 .aboutBanner .cover img {
@@ -1635,6 +1658,10 @@ canvas {
   line-height: 48px;
   font-family: 'Graphik';
   margin-bottom: 25px;
+}
+
+.shorts .short p {
+  color: #797A7C;
 }
 
 .bgImg {
@@ -1999,10 +2026,15 @@ canvas {
   line-height: 48px;
   margin-top: 8px;
   margin-bottom: 30px;
+  color: #797A7C;
 }
 
 .team .body .content .left .top h5 {
   font-family: 'Graphik';
+}
+
+.team .body .content .left .top p {
+  color: #797A7C;
 }
 
 .team .body .content .left .bottom {
@@ -2179,7 +2211,7 @@ canvas {
   top: 50%;
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
-  z-index: 0;
+  z-index: -1;
 }
 
 .careers {
@@ -2300,13 +2332,13 @@ canvas {
 .careers .vacancies .cover .body {
   height: 75%;
   width: 100%;
-  padding-top: 45px;
+  padding-top: 55px;
 }
 
 .careers .vacancies .cover .body .sect {
   padding: 0px 138px;
   width: 100%;
-  height: 21%;
+  height: 22%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2321,7 +2353,10 @@ canvas {
       -ms-flex-direction: row;
           flex-direction: row;
   color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #f5f5f5;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .careers .vacancies .cover .body .sect .left {
@@ -2331,7 +2366,7 @@ canvas {
 .careers .vacancies .cover .body .sect .left h5 {
   font-size: 50px;
   line-height: 58px;
-  font-family: 'Graphik';
+  font-family: 'Graphik-Thin';
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -2340,12 +2375,12 @@ canvas {
   font-family: 'Graphik';
 }
 
-.careers .vacancies .cover .body .active {
+.careers .vacancies .cover .body .sect:hover {
   background: #07424D;
   color: #ffffff;
 }
 
-.careers .vacancies .cover .body .active .left h5 {
+.careers .vacancies .cover .body .sect:hover .left h5 {
   color: #ffffff;
 }
 

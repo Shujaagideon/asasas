@@ -21,38 +21,31 @@
 @font-face {
   font-family: 'Graphik-Bold';
   src: url('../assets/Fonts/Graphik-Bold.otf');
-  font-weight: bold;
 }
 @font-face {
   font-family: 'Graphik';
   src: url('../assets/Fonts/Graphik-Extralight.otf');
-  font-weight: lighter;
 }
 @font-face {
   font-family: 'Graphik-light';
   src: url('../assets/Fonts/Graphik-Light.otf');
-  font-weight: 200;
 }
 @font-face {
   font-family: 'Graphik-Medium';
   src: url('../assets/Fonts/Graphik-Medium.otf');
-  font-weight: 400;
 }
 @font-face {
   font-family: 'Graphik-semiBold';
   src: url('../assets/Fonts/Graphik-Semibold.otf');
-  font-weight: 600;
 }
 
 @font-face {
   font-family: 'Graphik-Super';
   src: url('../assets/Fonts/Graphik-Super.otf');
-  font-weight: 700;
 }
 @font-face {
   font-family: 'Graphik-Thin';
   src: url('../assets/Fonts/Graphik-Thin.otf');
-  font-weight: 300;
 }
 @font-face {
   font-family: 'LT_5500';
@@ -164,5 +157,13 @@ p {
   p{
     font-size: 14px;
     line-height: 19px;
+  }
+}
+@include media('<=tablet'){
+  h1{
+    font-size: 100px;
+  }
+  h3{
+    font-size: 70px;
   }
 }

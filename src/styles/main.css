@@ -2002,6 +2002,13 @@ canvas {
   width: 100%;
 }
 
+@media (max-width: 1439px) {
+  .team .head .person .imgCover {
+    height: 100px;
+    width: 100px;
+  }
+}
+
 .team .head .active {
   background-color: #C78F66;
 }
@@ -2172,6 +2179,19 @@ canvas {
   line-height: 24px;
 }
 
+@media (max-width: 1439px) {
+  .phil .cover .top p {
+    font-size: 14px;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .phil .cover {
+    padding-top: 80px;
+  }
+}
+
 .phil .cover .bottom {
   height: 80%;
   width: 100%;
@@ -2203,6 +2223,18 @@ canvas {
 
 .phil .cover .bottom .left h5 span {
   color: #C78F66;
+}
+
+@media (max-width: 1439px) {
+  .phil .cover .bottom .left h5 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .phil .cover .bottom .left p {
+    font-size: 14px;
+  }
 }
 
 .phil .cover .bottom .center {
@@ -2253,6 +2285,13 @@ canvas {
   height: 100%;
 }
 
+@media (max-width: 1439px) {
+  .phil .cover .bottom .right .imgCover {
+    height: 280px;
+    width: 280px;
+  }
+}
+
 .phil .cover .bottom .right .circle {
   position: absolute;
   height: 830px;
@@ -2264,6 +2303,13 @@ canvas {
   -webkit-transform: translate3d(0, -50%, 0);
           transform: translate3d(0, -50%, 0);
   z-index: -1;
+}
+
+@media (max-width: 1439px) {
+  .phil .cover .bottom .right .circle {
+    height: 750px;
+    width: 750px;
+  }
 }
 
 .careers {
@@ -2360,6 +2406,12 @@ canvas {
 
 .careers .spacing {
   height: 50vh;
+}
+
+@media (max-width: 1439px) {
+  .careers .spacing {
+    height: 80vh;
+  }
 }
 
 .careers .vacancies {

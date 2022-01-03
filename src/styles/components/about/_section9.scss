@@ -43,6 +43,9 @@
     }
     .spacing{
         height: 50vh;
+        @include media('<desktop'){
+            height: 80vh;
+        }
     }
     .vacancies{
         height: 106vh;

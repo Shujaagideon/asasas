@@ -39,6 +39,9 @@
                 line-height: 30px;
                 width: 53%;
                 color: $color-lightText2;
+                @include media('<desktop'){
+                    font-size: 15px;
+                }
             }
         }
         img{

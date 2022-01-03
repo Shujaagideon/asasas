@@ -8,6 +8,9 @@
         color: $color-white;
         h5{
             font-family: 'Graphik-Light';
+            @include media('<desktop'){
+                font-size: 30px;
+            }
         }
     }
     .historyBody{
@@ -34,6 +37,10 @@
                     border: 1px solid $color-white-50;
                     @include flexing(center, '', row);
                     color: $color-white;
+                    @include media('<desktop'){
+                        height: 240px;
+                        width: 240px;
+                    }
                     .left{
                         justify-self: flex-end;
                         padding-left: 72%;
@@ -57,6 +64,11 @@
                 margin-bottom: 50px;
                 position: relative;
                 @include flexing(center, center, row);
+                @include media('<desktop'){
+                    height: 600px;
+                    width: 600px;
+                    margin-bottom: 0px;
+                }
                 .markers{
                     position: absolute;
                     height: 100%;
@@ -73,6 +85,10 @@
                     overflow: hidden;
                     position: relative;
                     @include flexing(center, center, row);
+                    @include media('<desktop'){
+                        height: 560px;
+                        width: 560px;
+                    }
                     img{
                         position: absolute;
                         height: 100%;

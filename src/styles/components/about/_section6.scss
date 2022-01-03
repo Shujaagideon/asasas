@@ -66,6 +66,9 @@
                     font-size: 30px;
                     font-family: 'Graphik';
                     color: $color-gold;
+                    @include media('<desktop'){
+                        font-size: 20px;
+                    }
                 }
             }
             .right{
@@ -85,6 +88,9 @@
                     height: 520px;
                     margin-right: 80px;
                     z-index: 4;
+                    @include media('<desktop'){
+                        height: 350px;
+                    }
                 }
             }
         }

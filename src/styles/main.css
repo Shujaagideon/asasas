@@ -169,6 +169,12 @@ p {
   h1 {
     font-size: 100px;
   }
+  h2 {
+    font-size: 70px;
+  }
+  h3 {
+    font-size: 70px;
+  }
   p {
     font-size: 14px;
     line-height: 19px;
@@ -1551,6 +1557,12 @@ canvas {
   color: #797A7C;
 }
 
+@media (max-width: 1439px) {
+  .aboutBanner .cover .bottom p {
+    font-size: 15px;
+  }
+}
+
 .aboutBanner .cover img {
   position: absolute;
   height: 80%;
@@ -1726,6 +1738,12 @@ canvas {
   font-family: 'Graphik-Light';
 }
 
+@media (max-width: 1439px) {
+  .history .heading h5 {
+    font-size: 30px;
+  }
+}
+
 .history .historyBody {
   height: 75%;
   width: 100%;
@@ -1795,6 +1813,13 @@ canvas {
   color: #ffffff;
 }
 
+@media (max-width: 1439px) {
+  .history .historyBody .cover .btns .btn {
+    height: 240px;
+    width: 240px;
+  }
+}
+
 .history .historyBody .cover .btns .btn .left {
   justify-self: flex-end;
   padding-left: 72%;
@@ -1833,6 +1858,14 @@ canvas {
           flex-direction: row;
 }
 
+@media (max-width: 1439px) {
+  .history .historyBody .cover .main {
+    height: 600px;
+    width: 600px;
+    margin-bottom: 0px;
+  }
+}
+
 .history .historyBody .cover .main .markers {
   position: absolute;
   height: 100%;
@@ -1863,6 +1896,13 @@ canvas {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+@media (max-width: 1439px) {
+  .history .historyBody .cover .main .content {
+    height: 560px;
+    width: 560px;
+  }
 }
 
 .history .historyBody .cover .main .content img {
@@ -2044,6 +2084,12 @@ canvas {
   color: #C78F66;
 }
 
+@media (max-width: 1439px) {
+  .team .body .content .left .bottom {
+    font-size: 20px;
+  }
+}
+
 .team .body .content .right {
   height: 80%;
   width: 50%;
@@ -2076,6 +2122,12 @@ canvas {
   height: 520px;
   margin-right: 80px;
   z-index: 4;
+}
+
+@media (max-width: 1439px) {
+  .team .body .content .right img {
+    height: 350px;
+  }
 }
 
 .large {

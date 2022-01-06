@@ -47,10 +47,13 @@ export default class Slider {
         // })
         // console.log(this.buttons);
         const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-
+        
         const slides = slide.querySelectorAll("[data-slides]");
+        console.log(slide);
         slides.forEach(slide=>{
+            console.log(slide);
             const activeSlide = slide.querySelector("[data-active]");
+            console.log(activeSlide);
             let newIndex = [...slide.children].indexOf(activeSlide) + offset;
             if (newIndex < 0) newIndex = slide.children.length - 1;
             if (newIndex >= slide.children.length) newIndex = 0;
@@ -76,7 +79,6 @@ export default class Slider {
         // })
     }
     Swiper(){
-        console.log('hello swiper why the fuck are you not working?????')
         this.swiper = new Swiper('.swiper', {
             navigation: {
                 nextEl: '.swiper-button-next',

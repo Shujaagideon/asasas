@@ -1,0 +1,43 @@
+.advisory{
+    height: 150vh;
+    overflow: hidden;
+    .cover{
+        height: 100%;
+        width: 100%;
+        padding: 140px 135px;
+    }
+    .head{
+        height: 20%;
+        width: 100%;
+        text-align: center;
+        @include flexing(center, center, row);
+
+        h5{
+            width: 60%;
+            font-size: 55px;
+            font-family: 'Graphik-Regular';
+            line-height: 66px;
+        }
+    }
+    .body{
+        // padding-top: 210px;
+        height: 80%;
+        width: 100%;
+        display: flex;
+        .left{
+            height: 100%;
+            width: 45%;
+            // @include flexing(flex-start, center, column);
+            p{
+                width: 85%;
+            }
+        }
+        .right{
+            width: 50%;
+            height: 100%;
+            .main{
+                height: 812px;
+            }
+        }
+    }
+}

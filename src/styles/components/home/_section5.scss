@@ -29,7 +29,7 @@
         transform: translateY(-70px);
         // background: #000;
         @include media('<desktop'){
-        transform: translateY(-50px);
+            transform: translateY(-10px);
             font-size: 20px;
         }
     }

@@ -165,6 +165,10 @@ p {
   line-height: 22px;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (min-width: 1026px) and (max-width: 1439px) {
   h1 {
     font-size: 100px;
@@ -505,10 +509,6 @@ header[data-colored] .cover {
           flex-direction: column;
 }
 
-.headerExpand .content .middleContent .active {
-  background: #B48d5E;
-}
-
 .headerExpand .content .middleContent .navPod {
   cursor: pointer;
   width: 100%;
@@ -526,6 +526,10 @@ header[data-colored] .cover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.headerExpand .content .middleContent .navPod:hover {
+  background: #B48d5E;
 }
 
 .headerExpand .content .middleContent .navPod p {

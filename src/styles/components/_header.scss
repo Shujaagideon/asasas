@@ -156,14 +156,14 @@ header[data-colored]{
             height: 100%;
             border-right: 1px solid $color-white-50;
             @include flexing(flex-start, space-around, column);
-            .active{
-                background: $color-gold-hover;
-            }
             .navPod{
                 cursor: pointer;
                 width: 100%;
                 padding: 10px 20px;
                 @include flexing(center, space-between, row);
+                &:hover{
+                    background: $color-gold-hover;
+                }
                 p{
                     font-family: 'Graphik-Regular';
                     font-size: 18px;

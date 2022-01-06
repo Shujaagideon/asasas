@@ -1,0 +1,21 @@
+.privateClientBanner{
+    height: 87vh;
+    width: 100%;
+    background: url('../assets/images/navBg.png');
+    background-size: cover;
+    background-position: center;
+    @include flexing(center, center, column);
+    .cover{
+        height: 68%;
+        width: 70%;
+        padding-top: 57px;
+        color: $color-white;
+        @include flexing(center, space-around, column);
+        text-align: center;
+        .cont{
+            font-size: 30px;
+            line-height: 38px;
+            width: 50%;
+        }
+    }
+}

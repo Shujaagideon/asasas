@@ -149,6 +149,9 @@ p {
   font-size: 16px;
   line-height: 22px;
 }
+a{
+  text-decoration: none;
+}
 
 @include media('>smallLaptop','<desktop'){
   h1{

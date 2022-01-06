@@ -62,6 +62,11 @@
                     @include flexing(center, center, row);
                     margin-bottom: 18px;
                     border: 1px solid $color-black-light;
+                    cursor: pointer;
+                    transition: all 0.6s ease;
+                    &:hover{
+                        border-color: #000;
+                    }
                 }
             }
             .right{
@@ -89,7 +94,7 @@
                     height: 830px;
                     width: 830px;
                     border-radius: 50%;
-                    border: 1px solid $color-black-50;
+                    border: 1px solid $color-black-10;
                     left: 38%;
                     top: 50%;
                     transform: translate3d(0,-50%, 0);
